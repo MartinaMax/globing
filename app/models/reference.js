@@ -12,6 +12,11 @@ const referenceSchema = new mongoose.Schema(
             type: String,
             required: true,
             max: 500
+        },
+
+        img_url: {
+            type: String,
+            required: true
         }
     }
 );
