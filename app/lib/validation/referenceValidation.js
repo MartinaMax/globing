@@ -9,6 +9,8 @@ export const referenceValidation = (data) => {
                  .required(),
     descr: Joi.string()
                  .max(500)
+                 .required(),
+    img_url: Joi.string()
                  .required()
   });
 
