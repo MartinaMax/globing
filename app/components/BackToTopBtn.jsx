@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 const BackToTopBtn = () => {
+  
   const [isVisible, setIsVisible] = useState(false);
 
   // Show the button when page is scrolled down

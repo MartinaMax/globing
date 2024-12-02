@@ -12,6 +12,6 @@ const NavBar = () => {
         <Link href="/contact">Kontact</Link>
       </nav>
     );
-  };
+};
   
 export default NavBar;
