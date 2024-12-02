@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from "react";
 
@@ -31,7 +31,7 @@ const BackToTopBtn = () => {
   return (
     isVisible && (
       <button onClick={scrollToTop}>
-        <img src="svg/UpArrow.svg" alt="Up arrow svg"/>
+        <img src="svg/arrow-up.svg" alt="Up arrow svg"/>
       </button>
     )
   );
