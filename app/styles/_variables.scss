@@ -1,0 +1,51 @@
+$h1: 100px;
+$h2-big: 40px;
+$h2-small: 25px;
+$p-size: 18px;
+
+// Colors
+$blue: #0072B4;
+$coral: #F15B40;
+$blackish: #111111;
+$white: #FFFF;
+
+// Spacing
+$space15: 15px;
+$space50: 50px;
+$space150: 150px;
+
+// Screen breakpoints
+$breakpoint-small: 576px;  /* Phones */
+$breakpoint-medium: 768px; /*Tablets */
+$breakpoint-large: 992px; /* Desktops */
+$breakpoint-extra-large: 1200px; /*Large desktops */
+
+.body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $white
+}
+
+.input, .textarea, .button {
+    font-family: $text-font;
+    border: none;
+    border-radius: 0;
+}
+
+.input, .textarea {
+    outline: none;
+    border-bottom: 1px solid $blackish;
+    margin-bottom: $margin15;
+}
+
+
+.button {
+    height: 50px;
+    color: $white;
+    margin-top: $margin15;
+}
+
+.input {
+    height: 40px;
+}
