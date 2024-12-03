@@ -47,7 +47,7 @@ const HomePage = () => {
                         <p>Naši pracovníci sú členmi <a href="#">KOMORY GEODETOV A KARTOGRAFOV</a> a <a href="#">KOMORY POZEMKOVÝCH ÚPRAV</a>. Spoločnosť je vybavená špičkovou meračskou a výpočtovou technikou vrátane GPS aparatúr. Naša firma pri spracovaní výsledkov merania a vytváraní geodetických elaborátov využíva grafický systém MicroStation a KOKEŠ.</p>
                         <Link href="/price-offer">
                             <p>Žiadosť o cenovú ponuku</p>  
-                            <img src="#" alt="#" />
+                            <img src="/svg/arrow-r.svg" alt="#" />
                         </Link>
                     </div>
                 </section>
@@ -59,7 +59,7 @@ const HomePage = () => {
                     <ReferenceList/>
                     <Link href="/references">
                         <p>Všetky referencie</p>  
-                        <img src="#" alt="#" />
+                        <img src="/svg/arrow-r.svg" alt="#" />
                     </Link>
                 </section>
 
