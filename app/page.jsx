@@ -3,11 +3,11 @@
 const Home = () => {
    
   return (
-    <div>
-    <main>
-
-    </main>
-    </div>
+    <body>
+      <main>
+        
+      </main>
+    </body>
   );
 };
 
