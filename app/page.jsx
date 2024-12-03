@@ -68,7 +68,6 @@ const HomePage = () => {
             </main>
             <Footer/>
         </body>
-    );
-};
+  )};
 
 export default HomePage;

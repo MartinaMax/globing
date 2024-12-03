@@ -4,13 +4,13 @@ import Joi from 'joi';
 export const adminValidation = (data) => {
   
     const schema = Joi.object({
-    username: Joi.string()
-                 .min(2)
-                 .required(),
-    password: Joi.string()
-                 .min(8)
-                 .required(),
-  });
+        username: Joi.string()
+                     .min(2)
+                     .required(),
+        password: Joi.string()
+                     .min(8)
+                     .required(),
+    });
 
-  return schema.validate(data);
+    return schema.validate(data);
 };
