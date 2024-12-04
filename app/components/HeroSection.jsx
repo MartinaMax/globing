@@ -1,8 +1,8 @@
 'use client'
 
-const HeroSection = ({title, subtitle}) => {
+const HeroSection = ({backgroundImg, title, subtitle}) => {
     return (
-        <header style={{backgroundImage: "url('#')"}}>
+        <header style={{ backgroundImage: `url(${backgroundImg})` }}>
         
         {/* Darker overlay on the sides */}
         <div></div>
