@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import PhoneNmbrContact from "@/components/PhoneNmbrContact";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection"
 
 
 const ContactPage = () => {
@@ -12,6 +13,7 @@ const ContactPage = () => {
         <>
             <header>
                 <NavBar/>
+                <HeroSection  backgroundImg="#" title="Contact"/>
             </header>
             <main>
       

@@ -1,19 +1,15 @@
 'use client';
 
+import footer from '@/styles/components/components.module.scss'
+
 const Footer = () => {
     return (
-      <footer>
+      <footer className={footer.footer}>
         {/* Map Section */}
-
-        {/* Consent section */}  
-        <div>
-            <a href="#">Ochrana osobných údajov</a>
-            <a href="#">Zásady používania súborov cookies</a>
-        </div>  
 
         {/* Company info section */}
             <div>
-                <p>GLOBING POPRAD s.r.o.</p>
+                <p className={footer.p_strong}>GLOBING POPRAD s.r.o.</p>
                 <p>Dostojevského 3313/12, 058 01 Poprad, Slovensko</p>
                 <ul>
                     <li>IČO: 36444499</li>
@@ -27,7 +23,7 @@ const Footer = () => {
 
         {/* Contact info section */}
             <div>
-                <p>Kontakt</p>
+                <p className={footer.p_strong}>Kontakt</p>
                 <ul>
                     <li>Tel., fax.: +421 52 7731 450</li>
                     <li>Mobil: +421 905 273 309</li>
@@ -36,8 +32,14 @@ const Footer = () => {
                 </ul>
             </div>
 
+        {/* Consent section */}  
+        <div className={footer.containerConsent}>
+            <a href="#">Ochrana osobných údajov</a>
+            <a href="#">Zásady používania súborov cookies</a>
+        </div>  
+
         {/* Copyright */}
-        <p>&copy;2024 GLOBING POPRAD s.r.o All rights reserved</p>
+        <p className={footer.copyright}>&copy;2024 GLOBING POPRAD s.r.o All rights reserved</p>
       </footer>
     );
 };

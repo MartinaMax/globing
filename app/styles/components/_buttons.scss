@@ -1,0 +1,31 @@
+@use '../variables' as *;
+
+.backToTop {
+    background-color: $coral;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 60px;
+    justify-items: center;
+    align-content: center;
+    
+    display: none; 
+
+    @media (min-width: $breakpoint-large) {
+        display: inline-block;
+    }
+}
+
+.goToPage {
+    border-radius: 0;
+    border: 2px solid $coral;
+    display: inline-flex;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: $coral;
+    gap: $space15;
+
+    p {
+        font-weight: $text-strong;
+    }
+}

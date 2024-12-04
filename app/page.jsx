@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import ReferenceList from "@/components/ReferenceList";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
+import buttons from '@/styles/components/components.module.scss'
 
 const HomePage = () => {
    
@@ -13,7 +14,7 @@ const HomePage = () => {
         <>
             <header>
                 <NavBar/>
-                <HeroSection backgroundImg="#" title="Globing Poprad s.r.o" subtitle="#"/>
+                <HeroSection backgroundImg="#" phoneImage="img/Horse.jpg" title="Globing Poprad s.r.o" subtitle=""/>
             </header>
             <main>
 
@@ -46,7 +47,7 @@ const HomePage = () => {
                     <img src="#" alt="#" />
                     <div>
                         <p>Naši pracovníci sú členmi <a href="#">KOMORY GEODETOV A KARTOGRAFOV</a> a <a href="#">KOMORY POZEMKOVÝCH ÚPRAV</a>. Spoločnosť je vybavená špičkovou meračskou a výpočtovou technikou vrátane GPS aparatúr. Naša firma pri spracovaní výsledkov merania a vytváraní geodetických elaborátov využíva grafický systém MicroStation a KOKEŠ.</p>
-                        <Link href="/price-offer">
+                        <Link href="/price-offer" className={buttons.goToPage}>
                             <p>Žiadosť o cenovú ponuku</p>  
                             <img src="/svg/arrow-r.svg" alt="#" />
                         </Link>
@@ -58,7 +59,7 @@ const HomePage = () => {
                     <h1>Referencie</h1>
                     <h2>Pozrite si naše posledné projekty, na ktorých sme pracovali</h2>
                     <ReferenceList/>
-                    <Link href="/references">
+                    <Link href="/references" className={buttons.goToPage}>
                         <p>Všetky referencie</p>  
                         <img src="/svg/arrow-r.svg" alt="#" />
                     </Link>

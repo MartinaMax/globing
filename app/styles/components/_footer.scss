@@ -1,0 +1,53 @@
+@use '../variables' as *;
+
+.footer {
+    background-color: $blue;
+    color: $white;
+    font-family: $text-font;
+    padding: $phone-padding;
+    text-align: center;
+
+    div {
+        margin-bottom: $space30;
+    }
+
+    div ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        margin-bottom: $space15;
+    }
+
+    .p_strong {
+        font-weight: $text-strong;
+        margin: 0;
+    }
+
+    .containerConsent {
+        display: grid;
+
+        a {
+            color: $white; 
+        }
+        
+    }
+
+    .copyright {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        padding: 50px 170px;
+
+        .copyright {
+            font-size: 18px;
+        }
+    }
+
+    
+}
+
