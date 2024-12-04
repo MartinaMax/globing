@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 const ContactPage = () => {
 
     return (
-        <body>
+        <>
             <header>
                 <NavBar/>
             </header>
@@ -55,7 +55,7 @@ const ContactPage = () => {
                 <BackToTopBtn/>
             </main>
             <Footer/>
-        </body>
+        </>
   );
 };
 

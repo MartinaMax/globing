@@ -2,17 +2,18 @@
 
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
+import HeroSection from "@/components/HeroSection";
 import ReferenceList from "@/components/ReferenceList";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
 
-
 const HomePage = () => {
    
     return (
-        <body>
+        <>
             <header>
                 <NavBar/>
+                <HeroSection backgroundImg="#" title="Globing Poprad s.r.o" subtitle="#"/>
             </header>
             <main>
 
@@ -67,7 +68,7 @@ const HomePage = () => {
                 <BackToTopBtn/>
             </main>
             <Footer/>
-        </body>
+        </>
   )};
 
 export default HomePage;

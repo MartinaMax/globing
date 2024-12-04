@@ -1,6 +1,7 @@
 'use client';
 
 import NavBar from "@/components/NavBar";
+import HeroSection from "@/components/HeroSection";
 import PhoneNmbrContact from "@/components/PhoneNmbrContact";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
@@ -8,9 +9,10 @@ import Footer from "@/components/Footer";
 const PriceOfferPage = () => {
 
     return (
-    <body>
+    <>
         <header>
             <NavBar/>
+            <HeroSection backgroundImg="#" title="Price offer"/>
         </header>
         <main>
             <h1></h1>
@@ -91,7 +93,7 @@ const PriceOfferPage = () => {
       
         </main>
         <Footer/>
-    </body>
+    </>
     );
 };
 
