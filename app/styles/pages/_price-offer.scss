@@ -1,0 +1,20 @@
+@use '../variables' as *;
+
+.formPriceOffer {
+    display: grid;
+
+    form {
+        justify-items: center;
+        //text-align: center;
+    }
+    //justify-content: center;
+    color: $blackish;
+}
+
+
+.containerContact_h2 {
+    h2{
+        font-size: $phone-h2-small;
+    }
+    text-align: center;
+}

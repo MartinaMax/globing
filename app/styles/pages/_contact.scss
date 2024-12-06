@@ -1,0 +1,16 @@
+@use '../variables' as *;
+
+.mainContact {
+    display: flex;
+    justify-content: center;
+
+    h2 {
+        text-align: center;
+        font-size: $phone-h2-big;
+    }
+
+    .containerPhone {
+        font-size: $phone-h2-small;
+    }
+}
+

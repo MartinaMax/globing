@@ -1,6 +1,6 @@
 'use client';
 
-import buttons from '@/styles/components/components.module.scss'
+import styles from '@/styles/styles.module.scss'
 import { useState, useEffect } from "react";
 
 const BackToTopBtn = () => {
@@ -32,7 +32,7 @@ const BackToTopBtn = () => {
 
     return (
         isVisible && (
-            <button onClick={scrollToTop} className={buttons.backToTop}>
+            <button onClick={scrollToTop} className={styles.backToTop}>
                 <img src="svg/arrow-up.svg" alt="Up arrow svg"/>
             </button>
         )

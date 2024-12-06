@@ -48,9 +48,10 @@
       align-items: center;
       height: 70%;
       color: white;
+      padding: 22px;
     }
     
     .hero_content h1 {
-      font-weight: bold;
+      font-size: $phone-h1;
       text-align: center;
     }

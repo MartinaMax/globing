@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 $heading-font: "Oswald", sans-serif;
-$text-font:"Roboto", sans-serif;  
+$text-font:"Roboto", sans-serif; 
+// Phone font sizes
+$phone-h1: 50px;
+$phone-h2-big: 30px;
+$phone-h2-small: 20px;
+// Descktop font sizes
 $h1: 100px;
 $h2-big: 40px;
 $h2-small: 25px;
 $p-size: 18px;
+
+
 $text-strong: 600;
 
 // Colors
@@ -19,6 +26,7 @@ $white: #FFFF;
 $space15: 15px;
 $space30: 30px;
 $space50: 50px;
+$space80: 80px;
 $space100: 100px;
 $space150: 150px;
 
@@ -40,13 +48,14 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
         padding: $phone-padding;
        
         
-        @media (min-width: $breakpoint-large) {
-           padding: $desktop-padding;
-        }
+        // @media (min-width: $breakpoint-large) {
+        //    padding: $desktop-padding;
+        // }
     }
 
     h1, h2 {
         font-family: $heading-font;
+        font-size: unset;
         
     }
 
@@ -64,6 +73,7 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
 
     input, textarea {
         outline: none;
+        max-width: 400px;
         border-bottom: 1px solid $blackish;
         margin-bottom: $space30;
 
@@ -74,6 +84,10 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
 
     input {
         height: 40px;
+    }
+
+    label {
+        color: $blackish;
     }
 
     button {

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import navigation from '@/styles/components/components.module.scss';
+import styles from '@/styles/styles.module.scss';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,24 +27,24 @@ const Navbar = () => {
     };
 
     return (
-        <div className={navigation.navbar}>
+        <div className={styles.navbar}>
         {/* Logo */}
-            <div className={ navigation.containerLogo}>
+            <div className={styles.containerLogo}>
                 <Link href="/" >
-                    <img src="/img/globing-logo.png" alt="Globing poprad logo"  className={ navigation.logo}/>
+                    <img src="/img/globing-logo.png" alt="Globing poprad logo"  className={styles.logo}/>
                 </Link>
             </div>
 
         {/* Burger menu icon */}
-            <div className={navigation.containerIcon}>
+            <div className={styles.containerIcon}>
                 {isMobile && (
-                    <img src="/svg/burger-menu.svg" alt="Burger menu icon" className={ navigation.burgerIcon} onClick={toggleMenu}/>
+                    <img src="/svg/burger-menu.svg" alt="Burger menu icon" className={styles.burgerIcon} onClick={toggleMenu}/>
                 )}
             </div>
 
         {/* Desktop Menu */}
         {!isMobile && (
-            <nav className={ navigation.desktopMenu}>
+            <nav className={styles.desktopMenu}>
                 <Link href="/price-offer">Price offer</Link>
                 <Link href="/references">References</Link>
                 <Link href="/contact">Contact</Link>
@@ -54,22 +54,22 @@ const Navbar = () => {
         {/* Mobile Dropdown Menu */}
         {isMobile && (
             <div
-                className={`${navigation.mobileMenu} ${
-                isMenuOpen ? navigation.dropdownVisible : ""
+                className={`${styles.mobileMenu} ${
+                isMenuOpen ? nstyles.dropdownVisible : ""
                 }`}
             >
-                <div className={navigation.dropdownHeader}>
-                    <div className={navigation.dropdownLogo}>
+                <div className={styles.dropdownHeader}>
+                    <div className={styles.dropdownLogo}>
                         <Link href="/"  onClick={toggleMenu}>
-                            <img src="/img/globing-logo.png" alt="Globing Poprad Logo" className={ navigation.logo}/>
+                            <img src="/img/globing-logo.png" alt="Globing Poprad Logo" className={styles.logo}/>
                         </Link>
                     </div>
 
-                    <div className={navigation.containerIcon}>
-                        <img src="/svg/close.svg" alt="Close icon" className={navigation.buttonClose} onClick={toggleMenu} />
+                    <div className={styles.containerIcon}>
+                        <img src="/svg/close.svg" alt="Close icon" className={styles.buttonClose} onClick={toggleMenu} />
                     </div>
                 </div>
-                <nav className={navigation.navLinks}>
+                <nav className={styles.navLinks}>
                     <Link href="/price-offer"><h1>Price offer</h1></Link>
                     <Link href="/references"><h1>References</h1></Link>
                     <Link href="/contact"><h1>Contact</h1></Link>

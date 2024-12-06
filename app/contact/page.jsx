@@ -4,7 +4,8 @@ import NavBar from "@/components/NavBar";
 import PhoneNmbrContact from "@/components/PhoneNmbrContact";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection"
+import HeroSection from "@/components/HeroSection";
+import styles from '@/styles/styles.module.scss';
 
 
 const ContactPage = () => {
@@ -15,12 +16,11 @@ const ContactPage = () => {
                 <NavBar/>
                 <HeroSection  backgroundImg="#" title="Contact"/>
             </header>
-            <main>
+            <main className={styles.mainContact}>
       
-                <h1>Kontaktujte alebo nás navštívte</h1>
                 {/* Phone number contact Section */}
                 <section>
-                    <PhoneNmbrContact/>
+                    <PhoneNmbrContact title="Kontaktujte alebo nás navštívte"/>
                 </section>
 
                 {/* IMGs and Contact form section */}
@@ -36,7 +36,7 @@ const ContactPage = () => {
                     <div>
                         <form action="post">
                             <label htmlFor="name"></label>
-                            <input type="text" />
+                            <input type="text" id='name' name="name" />
                             <label htmlFor="surname"></label>
                             <input type="text" />
                             <label htmlFor="phone number"></label>

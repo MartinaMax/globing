@@ -1,0 +1,28 @@
+@use '../variables' as *;
+
+.Title {
+    font-size: 2rem;
+}
+
+.containerPhone {
+    text-align: center;
+    div {
+        text-align: center;
+        
+        div {
+            display: flex;
+            justify-content: center;
+            gap: $space15;
+
+            .h2_blue{
+                color: $blue;
+            }
+        }
+         
+    }
+   
+}
+
+.h2_small {
+    font-size: 30px;
+}

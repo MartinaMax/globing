@@ -17,9 +17,10 @@
 }
 
 .goToPage {
+    width: fit-content;
     border-radius: 0;
     border: 2px solid $coral;
-    display: inline-flex;
+    display: flex;
     padding: 15px 10px;
     text-decoration: none;
     color: $coral;
@@ -28,4 +29,10 @@
     p {
         font-weight: $text-strong;
     }
+}
+
+.submitBtn {
+    background-color: $coral;
+    width: 340px ;
+
 }

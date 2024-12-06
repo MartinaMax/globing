@@ -1,0 +1,77 @@
+@use '../variables' as *;
+
+// Quote section
+.containerQuote {
+    font-size: $phone-h2-small;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: $space80;
+
+    p {
+        color: $blue;
+    }
+}
+
+// Services section
+.containerServices {
+    text-align: center;
+    margin-bottom: $space80;
+
+    h1 {
+        font-size: $phone-h2-big;
+    }
+
+    p {
+        padding: 0 20px;
+        margin-bottom: $space30;
+    }
+
+    div {
+        text-align: center;
+        font-size: $phone-h2-small;
+        background-color: aqua;
+        color: $white;
+        padding: $space30;
+        margin-bottom: $space15;
+
+        h2 {
+            margin: 0;
+        }
+    }
+}
+
+// Price offer section
+.containerPriceOffer {
+    text-align: justify;
+    text-align: center;
+    margin-bottom: $space80;
+    
+    h1 {
+        font-size: $phone-h2-big;
+    }
+
+    p > a {
+        color: $blue;
+    }
+
+    .containerPriceOffer_p{
+        padding: 30px 0;
+    }
+}
+
+// References section
+
+.containerReferences {
+    text-align: justify;
+    text-align: center;
+    margin-bottom: $space80;
+    display: grid;
+    
+    h1 {
+        font-size: $phone-h2-big;
+    }
+
+    h2 {
+        font-size: $p-size;
+    }
+}
