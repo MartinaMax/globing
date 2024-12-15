@@ -7,12 +7,13 @@ $text-font:"Roboto", sans-serif;
 $phone-h1: 50px;
 $phone-h2-big: 30px;
 $phone-h2-small: 20px;
+$phone-p-size: 18px;
+
 // Descktop font sizes
 $h1: 100px;
 $h2-big: 40px;
 $h2-small: 25px;
-$p-size: 18px;
-
+$p-size: 20px;
 
 $text-strong: 600;
 
@@ -30,7 +31,7 @@ $space80: 80px;
 $space100: 100px;
 $space150: 150px;
 
-$phone-padding: 50px 22px;
+$phone-padding: 80px 22px;
 $desktop-padding: 150px 170px;
 
 // Screen breakpoints
@@ -43,14 +44,15 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: $blackish;
 
     main {
         padding: $phone-padding;
        
         
-        // @media (min-width: $breakpoint-large) {
-        //    padding: $desktop-padding;
-        // }
+        @media (min-width: $breakpoint-large) {
+           padding: $desktop-padding;
+        }
     }
 
     h1, h2 {
@@ -61,19 +63,19 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
 
     p, li{
         font-family: $text-font;
-        font-size: $p-size;
+        font-size: $phone-p-size;
         margin: 0;
     }
-
-    input, textarea, button {
+    
+    input, textarea, button, select {
         font-family: $text-font;
         border: none;
         border-radius: 0;
     }
 
-    input, textarea {
+    input, textarea , select {
         outline: none;
-        max-width: 400px;
+        width: 100%;
         border-bottom: 1px solid $blackish;
         margin-bottom: $space30;
 
@@ -82,12 +84,26 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
         }
     }
 
-    input {
+    select {
+       width: 300px;
+
+    }
+
+    option {
+        border-radius: 0 ;
+    }
+
+    input, select {
         height: 40px;
     }
 
+    textarea {
+        height: 150px;
+    }
+
     label {
-        color: $blackish;
+        font-family: $text-font ;
+        //color: $blackish;
     }
 
     button {

@@ -6,8 +6,30 @@ import PhoneNmbrContact from "@/components/PhoneNmbrContact";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
 import styles from '@/styles/styles.module.scss';
+import { useState, useEffect } from "react";
 
 const PriceOfferPage = () => {
+
+    const [query, setQuery] = useState("");
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+    const dropdownItems = ["Option 1", "Option 2", "Option 3", "Another Option"];
+  
+    const filteredItems = dropdownItems.filter((item) =>
+      item.toLowerCase().includes(query.toLowerCase())
+    );
+  
+    const handleInputChange = (e) => {
+      setQuery(e.target.value);
+      setIsMenuOpen(e.target.value.length > 0); // Open the menu if there is input
+    };
+  
+    const handleSelect = (value) => {
+      setQuery(value); // Set the selected value to the input
+      setIsMenuOpen(false); // Close the menu
+    };
+  
+  
 
     return (
     <>
@@ -15,8 +37,8 @@ const PriceOfferPage = () => {
             <NavBar/>
             <HeroSection backgroundImg="#" title="Price offer"/>
         </header>
-        <main>
-            <h2></h2>
+        <main className={styles.mainPhone}>
+            <h2>Žiadosť o cenovú ponuku</h2>
 
         {/* Services & Price offer form section */}
             <section>
@@ -58,24 +80,39 @@ const PriceOfferPage = () => {
             {/* Price offer */}
                 <article className={styles.formPriceOffer}>
                     <form action="post">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name*</label>
                         <input type="text"  id='name' name="name"/>
-                        <label htmlFor="surname">Surname</label>
+                        <label htmlFor="surname">Surname*</label>
                         <input type="text"  id='surname' name="surname"/>
-                        <label htmlFor="phone_number">Phone number</label>
-                        <input type="text"  id='phone_number' name="phone_number"/>
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="phone_nmbr">Phone number*</label>
+                        <input type="text"  id='phone_nmbr' name="phone_number"/>
+                        <label htmlFor="email">Email*</label>
                         <input type="email" id='email' name="email"/>
-                        <label htmlFor=""></label>
-                        <input type="text" />
-                        <label htmlFor=""></label>
-                        <input type="text" />
-                        <label htmlFor="city"></label>
-                        <input type="text" />
-                        <label htmlFor="subject"></label>
-                        <input type="text" />
-                        <label htmlFor="message"></label>
-                        <textarea name="message" id=""></textarea>
+                        <label htmlFor="cadastral">Cadastral territory*</label>
+                        <input type="text" id='cadastral' name="cadastral" />
+                        <label htmlFor="parcel-nmbr">Parcel number*</label>
+                        <input type="text" id='parcel-nmbr' name="parcel-nmbr"/>
+                        <label htmlFor="municipality">Municipality*</label>
+                        <input type="text" id='municipality' name="municipality"/>
+                        
+                        <label htmlFor="subject">Subject</label>
+                        {/* <input type="text" id='subject' name="subject"/> */}
+                       <div style={styles.dropdownContainer}>
+        <select
+        id="leaseAgreementPraha2"
+        
+        //value={formData.leaseAgreementPraha2}
+        //onChange={handleChange}
+        name="leaseAgreementPraha2"
+      >
+        <option value="" hidden>Choose</option>
+        <option value="Mám" className={styles.selectOption}>hhh</option>
+        <option value="Nemám" className={styles.selectOption}>hhh</option>
+      </select>
+      </div>                     
+                        
+                        <label htmlFor="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
 
                         <button className={styles.submitBtn}> Submit </button>
                     </form>
@@ -84,9 +121,8 @@ const PriceOfferPage = () => {
 
         {/* Contact Section */}
             <section>
-                <h2 className={styles.containerContact_h2}> Alebo nás kontaktujte</h2>
                 {/* Phone number contact */}
-                <PhoneNmbrContact/>
+                <PhoneNmbrContact title="Alebo nás kontaktujte"/>
             </section>
 
         {/* Back to top button */}

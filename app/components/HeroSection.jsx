@@ -4,7 +4,7 @@ import styles from '@/styles/styles.module.scss';
 
 const Hero = ({phoneImage, backgroundImage, title, subtitle }) => {
     return (
-        <div className={`${styles.hero}`}>
+        <div className={styles.hero}>
             <picture>
                 {/* Mobile image */}
                 <source srcSet={phoneImage} media="(max-width: 768px)" />

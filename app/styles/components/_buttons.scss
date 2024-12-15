@@ -17,6 +17,7 @@
 }
 
 .goToPage {
+    justify-self: end;
     width: fit-content;
     border-radius: 0;
     border: 2px solid $coral;
@@ -33,6 +34,7 @@
 
 .submitBtn {
     background-color: $coral;
-    width: 340px ;
-
+    width: 100%;
+    padding: $space15;
+    font-size: $phone-p-size;
 }

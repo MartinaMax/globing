@@ -27,28 +27,28 @@ const ContactPage = () => {
                 <section>
 
                 {/* IMGs */}
-                    <div>
-                        <img src="#" alt="#" />
+                    <div className={styles.containerImg}>
+                        <img src="/img/globing-entrance.jpg" alt="#" />
                         <img src="#" alt="#" />
                     </div>
 
                 {/* Contact form */}
-                    <div>
+                    <div className={styles.containerForm_C}>
                         <form action="post">
-                            <label htmlFor="name"></label>
+                            <label htmlFor="name">Name*</label>
                             <input type="text" id='name' name="name" />
-                            <label htmlFor="surname"></label>
+                            <label htmlFor="surname">Surname*</label>
+                            <input type="text"/>
+                            <label htmlFor="phone number">Phone number*</label>
                             <input type="text" />
-                            <label htmlFor="phone number"></label>
+                            <label htmlFor="email">Email*</label>
                             <input type="text" />
-                            <label htmlFor="email"></label>
+                            <label htmlFor="subject">Subject</label>
                             <input type="text" />
-                            <label htmlFor="subject"></label>
-                            <input type="text" />
-                            <label htmlFor="message"></label>
+                            <label htmlFor="message">Message</label>
                             <textarea name="message" id=""></textarea>
 
-                            <button>Submit</button>
+                            <button className={styles.submitBtn}>Submit</button>
                         </form>
                     </div>
                 </section>

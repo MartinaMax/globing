@@ -1,20 +1,46 @@
 @use '../variables' as *;
 
-.formPriceOffer {
-    display: grid;
-
-    form {
-        justify-items: center;
-        //text-align: center;
+.mainPhone {
+    font-size: $phone-h2-big;
+    
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        //font-size: $phone-h2-big;
     }
-    //justify-content: center;
-    color: $blackish;
+
+    .formPriceOffer {
+        display: grid;
+        margin-bottom: $space80;
+    
+        form {
+            font-size: $phone-p-size;
+            justify-items: center;
+            padding: 18px;
+            //text-align: center;
+        }
+    
+        .selectOption {
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+    
+            &:hover {
+                background-color: $blue;
+            }
+        }
+        //justify-content: center;
+        color: $blackish;
+    }
+    
+    .containerPhone {
+        font-size: $phone-p-size;
+        margin-bottom: $space80;
+    
+    
+         @media (min-width: $breakpoint-large) {
+            font-size: $h2-small;
+        }
+    }
 }
 
-
-.containerContact_h2 {
-    h2{
-        font-size: $phone-h2-small;
-    }
-    text-align: center;
-}

@@ -55,7 +55,7 @@ const Navbar = () => {
         {isMobile && (
             <div
                 className={`${styles.mobileMenu} ${
-                isMenuOpen ? nstyles.dropdownVisible : ""
+                isMenuOpen ? styles.dropdownVisible : ""
                 }`}
             >
                 <div className={styles.dropdownHeader}>

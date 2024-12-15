@@ -1,16 +1,37 @@
 @use '../variables' as *;
 
 .mainContact {
-    display: flex;
-    justify-content: center;
+    font-size: $phone-h2-big;
 
     h2 {
         text-align: center;
-        font-size: $phone-h2-big;
+        margin-top: 0;
     }
 
     .containerPhone {
-        font-size: $phone-h2-small;
+        font-size: $phone-p-size;
+        margin-bottom: $space80;
+
+
+        @media (min-width: $breakpoint-large) {
+            font-size: $h2-small;
+        }
+    }
+
+    .containerImg {
+        margin-bottom: $space80;
+
+        img {
+            width: 100% ;
+        }
+    }
+
+    .containerForm_C {
+        font-size: $phone-p-size;
+
+        form {
+            padding: 0 18px;
+        }
     }
 }
 
