@@ -7,7 +7,7 @@ const Hero = ({phoneImage, backgroundImage, title, subtitle }) => {
         <div className={styles.hero}>
             <picture>
                 {/* Mobile image */}
-                <source srcSet={phoneImage} media="(max-width: 768px)" />
+                <source srcSet={phoneImage} media="(max-width: 768px)"/>
                 {/* Default to desktop/tablet image */}
                 <img src={backgroundImage} alt="Hero background" className={styles.image} />
             </picture>

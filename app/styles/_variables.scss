@@ -67,33 +67,32 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
         margin: 0;
     }
     
-    input, textarea, button, select {
+    input, textarea, button, span {
         font-family: $text-font;
+        font-size: $phone-p-size;
         border: none;
         border-radius: 0;
+        cursor: pointer;
     }
 
-    input, textarea , select {
+    input, textarea{
         outline: none;
         width: 100%;
         border-bottom: 1px solid $blackish;
         margin-bottom: $space30;
+        
+
+        &:focus {
+            border-color: $coral;
+        }
 
         @media (min-width: $breakpoint-large) {
-            margin-bottom: $space15;
+            margin: $space15 0;
+            font-size: $p-size;
         }
     }
 
-    select {
-       width: 300px;
-
-    }
-
-    option {
-        border-radius: 0 ;
-    }
-
-    input, select {
+    input {
         height: 40px;
     }
 
@@ -102,13 +101,10 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
     }
 
     label {
-        font-family: $text-font ;
-        //color: $blackish;
+        font-family: $text-font;
     }
 
     button {
-        //height: 50px;
         color: $white;
-        //margin-top: $space15;
     }
 }
