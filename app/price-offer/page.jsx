@@ -6,19 +6,43 @@ import PhoneNmbrContact from "@/components/PhoneNmbrContact";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
 import styles from '@/styles/styles.module.scss';
-import { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const PriceOfferPage = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Choose an option");
-  const dropdownItems = ["VYTYČENIE POZEMKU", "VYHOTOVENIE GEOMETRICKÉHO PLÁNU POLOHOPISNÉ A VÝSKOPISNÉ ZAMERANIE", "INE"];
+  const dropdownItems = [
+    "VYTYČENIE POZEMKU",
+    "VYHOTOVENIE GEOMETRICKÉHO PLÁNU POLOHOPISNÉ A VÝSKOPISNÉ ZAMERANIE",
+    "INE"
+  ];
 
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  const dropdownRef = useRef(null);
 
+  // Toggle dropdown open/close
+  const toggleDropdown = () => setIsDropdownOpen((prev) => !prev);
+
+  // Handle selection
   const handleSelect = (option) => {
     setSelectedOption(option);
-    setIsDropdownOpen(false); // Close the dropdown after selecting an option
+    setIsDropdownOpen(false); // Close dropdown
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    // Attach listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Clean up listener
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -111,6 +135,8 @@ const PriceOfferPage = () => {
               <div>
                 <label htmlFor="subject">Subject</label>
                 <div
+                  ref={dropdownRef}
+
                 className={`${styles.formSelect} ${isDropdownOpen ? styles.active : ""}`}
                 >
                   <div className={styles.formSelect_input} onClick={toggleDropdown}>
@@ -119,6 +145,7 @@ const PriceOfferPage = () => {
                   </div>
                   {isDropdownOpen && (
                     <ul className={styles.formSelect_menu}>
+                       
                       {dropdownItems.map((option, index) => (
                         <li key={index} onClick={() => handleSelect(option)}>
                           {option}
