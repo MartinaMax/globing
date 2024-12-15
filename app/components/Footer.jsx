@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Map Section */}
 
         {/* Company info section */}
-            <div>
+            <div className={styles.containerCompInfo}>
                 <p className={styles.p_strong}>GLOBING POPRAD s.r.o.</p>
                 <p>Dostojevského 3313/12, 058 01 Poprad, Slovensko</p>
                 <ul>
@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
 
         {/* Contact info section */}
-            <div>
+            <div className={styles.containerContactInfo}>
                 <p className={styles.p_strong}>Kontakt</p>
                 <ul>
                     <li>Tel., fax.: +421 52 7731 450</li>
