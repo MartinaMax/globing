@@ -24,29 +24,49 @@ const ContactPage = () => {
                 </section>
 
                 {/* IMGs and Contact form section */}
-                <section>
+                <section className={styles.containerImgForm}>
 
                 {/* IMGs */}
                     <div className={styles.containerImg}>
-                        <img src="/img/globing-entrance.jpg" alt="#" />
+                        <img src="/img/globing-building.jpg" alt="Photo of an entrance to GLOBING Poprad."/>
                         <img src="#" alt="#" />
                     </div>
 
                 {/* Contact form */}
                     <div className={styles.containerForm_C}>
                         <form action="post">
-                            <label htmlFor="name">Name*</label>
-                            <input type="text" id='name' name="name" />
-                            <label htmlFor="surname">Surname*</label>
-                            <input type="text"/>
-                            <label htmlFor="phone number">Phone number*</label>
-                            <input type="text" />
-                            <label htmlFor="email">Email*</label>
-                            <input type="text" />
-                            <label htmlFor="subject">Subject</label>
-                            <input type="text" />
-                            <label htmlFor="message">Message</label>
-                            <textarea name="message" id=""></textarea>
+                        
+                        <div className={styles.row}>
+                            <div>
+                                <label htmlFor="name">Name*</label>
+                                <input type="text" id='name' name="name" />
+                            </div>
+                            <div>
+                                <label htmlFor="surname">Surname*</label>
+                                <input type="text" id="surname" name="surname" />
+                            </div>
+                        </div>
+                        <div className={styles.row}>
+                            <div>
+                                <label htmlFor="phone_nmbr">Phone number*</label>
+                                <input type="text" id="phone_nmbr" name="phone_nmbr"  />
+                            </div>
+
+                            <div>
+                                <label htmlFor="email">Email*</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                            
+                            <div>
+                                <label htmlFor="subject">Subject</label>
+                                <input type="text" />
+                            </div>
+                            
+                            <div>
+                                <label htmlFor="message">Message</label>
+                                <textarea name="message" id=""></textarea>
+                            </div>
 
                             <button className={styles.submitBtn}>Submit</button>
                         </form>

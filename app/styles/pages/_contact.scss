@@ -33,5 +33,51 @@
             padding: 0 18px;
         }
     }
+
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $h2-big;
+            
+        .containerPhone {
+            font-size: $h2-small;
+            margin-bottom: $space150;
+        }
+
+        .containerImgForm {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: $space100;
+
+            .containerImg {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                margin-bottom: 0;
+        
+                img {
+                    width: 100%;
+                }
+            }
+
+            .containerForm_C {
+                font-size: $phone-p-size;
+        
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                    
+                    div {
+                        margin-bottom: $space15;
+                    }
+
+                    .row {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
 
