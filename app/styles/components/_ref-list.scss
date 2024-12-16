@@ -1,0 +1,30 @@
+@use '../variables' as *;
+
+.referencesDisplay {
+    list-style: none;
+    padding: 0;
+    display: grid;
+
+    .buttonReference_edit {
+        width: 100px;
+        background-color: $blue;
+    }
+    
+    .buttonReference_delete {
+        width: 100px;
+        background-color: $coral;
+    }
+     
+    li {
+        display: grid;
+        grid-template-columns: 0.9fr 2fr 6fr 1fr 1fr;
+        justify-content: start;
+        padding: 10px 0;
+        border-bottom: 1px solid $blackish;
+    
+        p {
+            font-size: $p-size;
+        }
+    
+    }
+}
