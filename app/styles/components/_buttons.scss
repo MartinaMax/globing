@@ -48,5 +48,16 @@
         align-self: end;
         width: 150px;
     }
+}
 
+.contactBtn {
+    @media (min-width: $breakpoint-large) {
+        background-color: $coral;
+        display: block;
+        text-align: center;
+        align-content: center;
+        justify-self: end;
+        width: 170px;
+        height: 70px;
+    }
 }

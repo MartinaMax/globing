@@ -15,7 +15,7 @@ const HomePage = () => {
         <>
             <header>
                 <NavBar/>
-                <HeroSection backgroundImage="img/hero-home.jpg" phoneImage="img/Horse.jpg" title="Globing Poprad s.r.o" subtitle=""/>
+                <HeroSection backgroundImage="img/hero-home.jpg" phoneImage="img/hero-p-home.jpg" title="Globing Poprad s.r.o" subtitle="Geodetické a kartografické práce"/>
             </header>
             <main>
 

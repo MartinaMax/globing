@@ -15,51 +15,31 @@
         display: flex;
         align-items: center;
         padding: 15px 22px;
+        background:  rgba(1, 1, 1, 0.200);;
 
         .logo {
             width: 150px; 
-          }
+        }
     }
       
-      .containerIcon{
+    .containerIcon{
         width: 10%;
         border-left: solid 1px $white;
         display: flex;
+        justify-content: center;
         justify-self: center;
         align-items: center;
         padding: 15px 22px;
-      }
+    }
   
-      .burgerIcon {
+    .burgerIcon {
         width: 40px;
         height: 40px;
-      }
+    }
   }
   
-  // Desktop Menu
-//   .desktopMenu {
-//     display: flex;
-//     gap: 20px;
-  
-//     a {
-//       color: white;
-//       font-size: 1rem;
-//       text-decoration: none;
-//       transition: color 0.3s;
-  
-//       &:hover {
-//         color:  $coral;
-//       }
-  
-//       &.highlighted {
-//         color: $coral;
-//         font-weight: bold;
-//       }
-//     }
-//   }
-  
-  // Mobile Dropdown Menu
-  .mobileMenu {
+// Mobile Dropdown Menu
+.mobileMenu {
     position: fixed;
     top: 0;
     left: 0;
@@ -76,7 +56,7 @@
     z-index: 16;
   
     &.dropdownVisible {
-      transform: translateY(0);
+        transform: translateY(0);
     }
   
     .dropdownHeader {
@@ -85,50 +65,102 @@
         display: flex;
         border: solid 1px $white;
   
-      .logo {
-        width: 150px;
-        background-color: $white;
-      }
+        .logo {
+            width: 150px;
+            background-color: $white;
+        }
 
-      .dropdownLogo {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        background-color: $white;
-        padding: 15px 22px;
-      }
+        .dropdownLogo {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            padding: 15px 22px;
+        }
 
-      .containerIcon {
-        width: 10%;
-        border-left: solid 1px $white;
-        display: flex;
-        justify-self: center;
-        align-items: center;
-        padding: 15px 22px;
-      }
+        .containerIcon {
+            width: 10%;
+            border-left: solid 1px $white;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            padding: 15px 22px;
+        }
   
-      .buttonClose {
-        width: 40px;
-        height: 40px;
-      }
+        .buttonClose {
+            width: 40px;
+            height: 40px;
+        }
     }
   
     .navLinks {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
+         display: flex;
+        flex-direction: column;
+        text-align: center;
   
-      a {
-        color: white;
-        font-size: 1.5rem;
-        text-decoration: none;
-        margin: 10px 0;
-        transition: color 0.3s;
+        a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s;
   
-        &.highlighted {
-          color: $coral;
-          font-weight: bold;
+            &:hover {
+            color: $coral;
+            }
         }
-      }
     }
-  }
+}
+
+@media (min-width: $breakpoint-large) {
+    .navbar {
+        position: absolute;
+        top: 0;
+        border: none;
+        justify-content: space-between;
+        height: 100vh;
+
+        .containerLogo {
+            width: 170px;
+            display: flex;
+            justify-content: center;
+            align-items:start;
+            background: rgba(1, 1, 1, 0.400);
+            padding: 50px 0 0 0;
+            border-right: 2px solid $white;
+        }
+
+        .containerIcon{
+            display: none;
+            border-left: none;
+        }
+
+        .desktopMenu {
+            width: 170px;
+            display: grid;
+            grid-template-rows: 1.5fr 1fr 1fr 5fr;
+            text-align: center;
+            border-left: 2px solid $white;
+            background-color: rgba(1, 1, 1, 0.400);
+      
+            a {
+                color: white;
+                font-size: $p-size;
+                font-family: $text-font;
+                font-weight: 600;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+    
+            &_link1, &_link2 {
+                &:hover {
+                    color:  $coral;
+                }
+            }
+    
+            .contactBtn {
+                grid-row: 1/2;
+            }
+        }
+    }
+}

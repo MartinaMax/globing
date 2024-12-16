@@ -7,7 +7,7 @@ const Hero = ({phoneImage, backgroundImage, title, subtitle }) => {
         <div className={styles.hero}>
             <picture>
                 {/* Mobile image */}
-                <source srcSet={phoneImage} media="(max-width: 768px)"/>
+                <source srcSet={phoneImage} media="(max-width: 900px)"/>
                 {/* Default to desktop/tablet image */}
                 <img src={backgroundImage} alt="Hero background" className={styles.image} />
             </picture>
@@ -15,14 +15,13 @@ const Hero = ({phoneImage, backgroundImage, title, subtitle }) => {
             {/* Darker overlay */}
             <div className={styles.heroOverlay}></div>
 
-            {/* White separator line on descktop */}
-            <div className={styles.separatorLine}></div>
-
             {/* Content */}
             <div className={styles.hero_content}>
                 <h1>{title}</h1>
                 <h2>{subtitle}</h2>
+                <img className={styles.arrow_down} src="svg/arrow-white.svg" alt="" />
             </div>
+           
         </div>
     );
 };

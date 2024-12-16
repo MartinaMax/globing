@@ -13,7 +13,7 @@ const ReferencesPage = () => {
     <>
         <header>
             <NavBar/>
-            <HeroSection  backgroundImg="#" title="References"/>
+            <HeroSection  backgroundImage="img/hero-ref.jpg" phoneImage="img/hero-p-ref.jpg" title="References"/>
         </header>
         <main className={styles.mainReferences}>
             <h2>References</h2>

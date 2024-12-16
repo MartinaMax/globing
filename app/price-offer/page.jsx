@@ -48,11 +48,7 @@ const PriceOfferPage = () => {
     <>
       <header>
         <NavBar/>
-        <HeroSection
-          backgroundImage="img/hero-price.jpg"
-          phoneImage="img/hero-price.jpg"
-          title="Price offer"
-        />
+        <HeroSection backgroundImage="img/hero-price.jpg" phoneImage="img/hero-p-price.jpg" title="Price offer"/>
       </header>
       <main className={styles.mainPrice}>
         <h2>Žiadosť o cenovú ponuku</h2>

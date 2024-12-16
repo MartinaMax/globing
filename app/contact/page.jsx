@@ -14,7 +14,7 @@ const ContactPage = () => {
         <>
             <header>
                 <NavBar/>
-                <HeroSection  backgroundImg="#" title="Contact"/>
+                <HeroSection  backgroundImage="img/hero-contact.jpg" phoneImage="img/hero-contact.jpg" title="Contact"/>
             </header>
             <main className={styles.mainContact}>
       

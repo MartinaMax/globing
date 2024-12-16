@@ -1,26 +1,43 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from '@/styles/styles.module.scss';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const dropdownRef = useRef(null); 
 
-    // Check if the screen is mobile
     useEffect(() => {
         const handleResize = () => {
-        setIsMobile(window.innerWidth <= 768);
+          setIsMobile(window.innerWidth <= 992);
         };
-
+    
         handleResize();
         window.addEventListener("resize", handleResize);
-
+    
         return () => {
-            window.removeEventListener("resize", handleResize);
+          window.removeEventListener("resize", handleResize);
         };
-    }, []);
+      }, []);
+    
+      // Handle clicking outside of the menu
+      useEffect(() => {
+        const handleClickOutside = (event) => {
+          if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setIsMenuOpen(false); // Close the menu if clicked outside
+          }
+        };
+    
+        if (isMenuOpen) {
+          document.addEventListener("mousedown", handleClickOutside);
+        }
+    
+        return () => {
+          document.removeEventListener("mousedown", handleClickOutside);
+        };
+      }, [isMenuOpen]);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -45,15 +62,16 @@ const Navbar = () => {
         {/* Desktop Menu */}
         {!isMobile && (
             <nav className={styles.desktopMenu}>
-                <Link href="/price-offer">Price offer</Link>
-                <Link href="/references">References</Link>
-                <Link href="/contact">Contact</Link>
+                <Link className={styles.desktopMenu_link1}href="/price-offer">Cenova ponuka</Link>
+                <Link className={styles.desktopMenu_link2}href="/references">References</Link>
+                <Link className={styles.contactBtn} href="/contact">Contact</Link>
             </nav>
         )}
 
         {/* Mobile Dropdown Menu */}
         {isMobile && (
             <div
+                ref={dropdownRef}
                 className={`${styles.mobileMenu} ${
                 isMenuOpen ? styles.dropdownVisible : ""
                 }`}

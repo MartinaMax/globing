@@ -13,7 +13,7 @@ const BackToTopBtn = () => {
 
     return (
         <button onClick={scrollToTop} className={styles.backToTop}>
-            <img src="svg/arrow-up.svg" alt="Up arrow svg"/>
+            <img src="svg/arrow-white.svg" alt="Up arrow svg"/>
         </button>
     );
 };
