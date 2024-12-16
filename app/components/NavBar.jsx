@@ -1,13 +1,20 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import Link from "next/link"; 
 import styles from '@/styles/styles.module.scss';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const dropdownRef = useRef(null); 
+
+    const pathname = usePathname();
+
+  // Function to check if the link is active
+  const isActive = (href) => pathname === href;
+  
 
     useEffect(() => {
         const handleResize = () => {
@@ -62,8 +69,8 @@ const Navbar = () => {
         {/* Desktop Menu */}
         {!isMobile && (
             <nav className={styles.desktopMenu}>
-                <Link className={styles.desktopMenu_link1}href="/price-offer">Cenova ponuka</Link>
-                <Link className={styles.desktopMenu_link2}href="/references">References</Link>
+                <Link className={`${styles.desktopMenu_link1} ${isActive('/price-offer') ? styles.active : ""}`} href="/price-offer">Cenova ponuka</Link>
+                <Link className={`${styles.desktopMenu_link2} ${isActive('/references') ? styles.active : ""}`} href="/references">References</Link>
                 <Link className={styles.contactBtn} href="/contact">Contact</Link>
             </nav>
         )}
@@ -88,9 +95,9 @@ const Navbar = () => {
                     </div>
                 </div>
                 <nav className={styles.navLinks}>
-                    <Link href="/price-offer"><h1>Price offer</h1></Link>
-                    <Link href="/references"><h1>References</h1></Link>
-                    <Link href="/contact"><h1>Contact</h1></Link>
+                    <Link href="/price-offer" className={isActive('/price-offer') ? styles.active : ''}><h1>Price offer</h1></Link>
+                    <Link href="/references" className={isActive('/references') ? styles.active : ''}><h1>References</h1></Link>
+                    <Link href="/contact" className={isActive('/contact') ? styles.active : ''}><h1>Contact</h1></Link>
                 </nav>
             </div>
         )}

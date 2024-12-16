@@ -106,9 +106,15 @@
             transition: color 0.3s;
   
             &:hover {
-            color: $coral;
+                color: $coral;
+            }
+            
+            &.active {
+                color: $coral;
             }
         }
+
+        
     }
 }
 
@@ -150,6 +156,10 @@
                 font-weight: 600;
                 text-decoration: none;
                 transition: color 0.3s;
+
+                &.active {
+                    color: $coral;
+                }
             }
     
             &_link1, &_link2 {
@@ -157,7 +167,9 @@
                     color:  $coral;
                 }
             }
-    
+
+            
+
             .contactBtn {
                 grid-row: 1/2;
             }
