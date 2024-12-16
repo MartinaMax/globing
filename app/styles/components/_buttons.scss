@@ -1,0 +1,63 @@
+@use '../variables' as *;
+
+.backToTop {
+    display: none; 
+
+    @media (min-width: $breakpoint-large) {
+        background-color: $coral;
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 60px;
+        justify-items: center;
+        align-content: center;
+        display: block;
+        position: absolute;
+        right: 50px;
+        cursor: pointer; 
+    }
+}
+
+.goToPage {
+    justify-self: end;
+    width: fit-content;
+    border-radius: 0;
+    border: 2px solid $coral;
+    display: flex;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: $coral;
+    gap: $space15;
+    cursor: pointer; 
+
+    p {
+        font-weight: $text-strong;
+    }
+}
+
+.submitBtn {
+    background-color: $coral;
+    width: 100%;
+    padding: $space15;
+    font-size: $phone-p-size;
+    cursor: pointer; 
+    
+    @media (min-width: $breakpoint-large) {
+        display: block;
+        justify-self: end;
+        align-self: end;
+        width: 150px;
+    }
+}
+
+.contactBtn {
+    @media (min-width: $breakpoint-large) {
+        background-color: $coral;
+        display: block;
+        text-align: center;
+        align-content: center;
+        justify-self: end;
+        width: 170px;
+        height: 70px;
+    }
+}

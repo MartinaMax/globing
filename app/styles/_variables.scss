@@ -1,7 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$heading-font: "Oswald", sans-serif;
+$text-font:"Roboto", sans-serif; 
+// Phone font sizes
+$phone-h1: 50px;
+$phone-h2-big: 30px;
+$phone-h2-small: 20px;
+$phone-p-size: 18px;
+
+// Descktop font sizes
 $h1: 100px;
 $h2-big: 40px;
 $h2-small: 25px;
-$p-size: 18px;
+$p-size: 20px;
+
+$text-strong: 600;
 
 // Colors
 $blue: #0072B4;
@@ -11,8 +25,14 @@ $white: #FFFF;
 
 // Spacing
 $space15: 15px;
+$space30: 30px;
 $space50: 50px;
+$space80: 80px;
+$space100: 100px;
 $space150: 150px;
+
+$phone-padding: 80px 22px;
+$desktop-padding: 150px 170px;
 
 // Screen breakpoints
 $breakpoint-small: 576px;  /* Phones */
@@ -24,28 +44,68 @@ $breakpoint-extra-large: 1200px; /*Large desktops */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: $white
-}
+    color: $blackish;
 
-.input, .textarea, .button {
-    font-family: $text-font;
-    border: none;
-    border-radius: 0;
-}
+    main {
+        padding: $phone-padding;
+       
+        
+        @media (min-width: $breakpoint-large) {
+           padding: $desktop-padding;
+        }
+    }
 
-.input, .textarea {
-    outline: none;
-    border-bottom: 1px solid $blackish;
-    margin-bottom: $margin15;
-}
+    h1, h2 {
+        font-family: $heading-font;
+        font-size: unset;
+        
+    }
 
+    p, li{
+        font-family: $text-font;
+        font-size: $phone-p-size;
+        margin: 0;
+    }
+    
+    input, textarea, button, span {
+        font-family: $text-font;
+        font-size: $phone-p-size;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+    }
 
-.button {
-    height: 50px;
-    color: $white;
-    margin-top: $margin15;
-}
+    input, textarea{
+        outline: none;
+        width: 100%;
+        border-bottom: 1px solid $blackish;
+        margin-bottom: $space30;
+        padding: 0;
+        
 
-.input {
-    height: 40px;
+        &:focus {
+            border-color: $coral;
+        }
+
+        @media (min-width: $breakpoint-large) {
+            margin: $space15 0;
+            font-size: $p-size;
+        }
+    }
+
+    input {
+        height: 40px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    label {
+        font-family: $text-font;
+    }
+
+    button {
+        color: $white;
+    }
 }

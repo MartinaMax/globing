@@ -1,22 +1,29 @@
 'use client'
 
-const HeroSection = ({backgroundImg, title, subtitle}) => {
+import styles from '@/styles/styles.module.scss';
+
+const Hero = ({phoneImage, backgroundImage, title, subtitle }) => {
     return (
-        <div style={{ backgroundImage: `url(${backgroundImg})` }}>
-        
-        {/* Darker overlay on the sides */}
-        <div></div>
-  
-        {/* White separator line */}
-        <div></div>
-  
-        {/* Content */}
-        <div>
-          <h1>{title}</h1>
-          <h2>{subtitle}</h2>
+        <div className={styles.hero}>
+            <picture>
+                {/* Mobile image */}
+                <source srcSet={phoneImage} media="(max-width: 900px)"/>
+                {/* Default to desktop/tablet image */}
+                <img src={backgroundImage} alt="Hero background" className={styles.image} />
+            </picture>
+      
+            {/* Darker overlay */}
+            <div className={styles.heroOverlay}></div>
+
+            {/* Content */}
+            <div className={styles.hero_content}>
+                <h1>{title}</h1>
+                <h2>{subtitle}</h2>
+                <img className={styles.arrow_down} src="svg/arrow-white.svg" alt="" />
+            </div>
+           
         </div>
-      </div>
     );
 };
-  
-export default HeroSection;
+
+export default Hero;

@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+.mainReferences {
+    h2 {
+        font-size: $phone-h2-big;
+        text-align: center;
+        margin-top: 0;
+    }
+}

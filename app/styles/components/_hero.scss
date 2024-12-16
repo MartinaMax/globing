@@ -1,0 +1,97 @@
+@use '../variables' as *;
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+  
+    picture {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+    
+/* Darker overlay */
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background: rgba(1, 1, 1, 0.500);
+}
+    
+/* Hero content */
+.hero_content {
+    text-align: center;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: fit-content;
+    color: white;
+    padding: 0 22px;
+
+    h1 {
+        font-size: $phone-h1;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: $phone-h2-small;
+    }
+
+    .arrow_down {
+        display: none;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .heroOverlay {
+        background: rgba(1, 1, 1, 0.500);
+    }
+
+    .hero {
+        height: 100vh; 
+    }
+    
+    .hero_content {
+        padding: 0;
+
+        h1 {
+            font-size: $h1;
+        }
+  
+        h2 {
+            font-size: $h2-big;
+        }
+    
+        .arrow_down {
+            display: block;
+            position: absolute;
+            bottom: 50px;
+            align-self: center;
+            width: 50px;
+            rotate: (180deg);
+            color: $white;
+        }
+    }
+}
+    

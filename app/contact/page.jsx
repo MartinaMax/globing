@@ -4,6 +4,8 @@ import NavBar from "@/components/NavBar";
 import PhoneNmbrContact from "@/components/PhoneNmbrContact";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import styles from '@/styles/styles.module.scss';
 
 
 const ContactPage = () => {
@@ -12,41 +14,61 @@ const ContactPage = () => {
         <>
             <header>
                 <NavBar/>
+                <HeroSection  backgroundImage="img/hero-contact.jpg" phoneImage="img/hero-contact.jpg" title="Contact"/>
             </header>
-            <main>
+            <main className={styles.mainContact}>
       
-                <h1>Kontaktujte alebo nás navštívte</h1>
                 {/* Phone number contact Section */}
                 <section>
-                    <PhoneNmbrContact/>
+                    <PhoneNmbrContact title="Kontaktujte alebo nás navštívte"/>
                 </section>
 
                 {/* IMGs and Contact form section */}
-                <section>
+                <section className={styles.containerImgForm}>
 
                 {/* IMGs */}
-                    <div>
-                        <img src="#" alt="#" />
+                    <div className={styles.containerImg}>
+                        <img src="/img/globing-building.jpg" alt="Photo of an entrance to GLOBING Poprad."/>
                         <img src="#" alt="#" />
                     </div>
 
                 {/* Contact form */}
-                    <div>
+                    <div className={styles.containerForm_C}>
                         <form action="post">
-                            <label htmlFor="name"></label>
-                            <input type="text" />
-                            <label htmlFor="surname"></label>
-                            <input type="text" />
-                            <label htmlFor="phone number"></label>
-                            <input type="text" />
-                            <label htmlFor="email"></label>
-                            <input type="text" />
-                            <label htmlFor="subject"></label>
-                            <input type="text" />
-                            <label htmlFor="message"></label>
-                            <textarea name="message" id=""></textarea>
+                        
+                        <div className={styles.row}>
+                            <div>
+                                <label htmlFor="name">Name*</label>
+                                <input type="text" id='name' name="name" />
+                            </div>
+                            <div>
+                                <label htmlFor="surname">Surname*</label>
+                                <input type="text" id="surname" name="surname" />
+                            </div>
+                        </div>
+                        <div className={styles.row}>
+                            <div>
+                                <label htmlFor="phone_nmbr">Phone number*</label>
+                                <input type="text" id="phone_nmbr" name="phone_nmbr"  />
+                            </div>
 
-                            <button>Submit</button>
+                            <div>
+                                <label htmlFor="email">Email*</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+                            
+                            <div>
+                                <label htmlFor="subject">Subject</label>
+                                <input type="text" />
+                            </div>
+                            
+                            <div>
+                                <label htmlFor="message">Message</label>
+                                <textarea name="message" id=""></textarea>
+                            </div>
+
+                            <button className={styles.submitBtn}>Submit</button>
                         </form>
                     </div>
                 </section>

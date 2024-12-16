@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import ReferenceList from "@/components/ReferenceList";
 import BackToTopBtn from "@/components/BackToTopBtn";
 import Footer from "@/components/Footer";
+import styles from "@/styles/styles.module.scss";
 
 const ReferencesPage = () => {
 
@@ -12,10 +13,10 @@ const ReferencesPage = () => {
     <>
         <header>
             <NavBar/>
-            <HeroSection backgroundImg="#" title="References"/>
+            <HeroSection  backgroundImage="img/hero-ref.jpg" phoneImage="img/hero-p-ref.jpg" title="References"/>
         </header>
-        <main>
-            <h1></h1>
+        <main className={styles.mainReferences}>
+            <h2>References</h2>
 
         {/* References section */}
             <section>
