@@ -1,5 +1,7 @@
 @use '../variables' as *;
 
+
+// Back to top button on all pages
 .backToTop {
     display: none; 
 
@@ -18,6 +20,7 @@
     }
 }
 
+// Go to page (tow buttons on home page)
 .goToPage {
     justify-self: end;
     width: fit-content;
@@ -35,6 +38,7 @@
     }
 }
 
+// Submit button on forms
 .submitBtn {
     background-color: $coral;
     width: 100%;
@@ -50,6 +54,7 @@
     }
 }
 
+// Contact button in desktop navigation
 .contactBtn {
     @media (min-width: $breakpoint-large) {
         background-color: $coral;
@@ -59,5 +64,52 @@
         justify-self: end;
         width: 170px;
         height: 70px;
+    }
+}
+
+
+// Admin panel 
+// Form SUBMIT, EDIT & CANCEL buttons
+.formBtn {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: $space15;
+    justify-items: end;
+    
+    &_submit_edit, &_cancel {
+        padding: $space15;
+        font-size: $phone-p-size;
+        display: block;
+        width: 150px;
+        grid-row: 1/2;
+    }
+
+    &_submit_edit {
+        grid-column: 2/3;
+        background-color: $coral;
+    }
+
+    &_cancel {
+        grid-column: 1/2;
+        background-color: $blue;
+    }
+}
+
+// EDIT & DELETE buttons
+.referenceBtn {
+    display: flex;
+    gap: $space15;
+
+    &_edit, &_delete {
+        width: 100px;
+        height: 45PX;
+    }
+
+    &_edit {
+        background-color: $blue;
+    }
+
+    &_delete {
+        background-color: $coral;
     }
 }

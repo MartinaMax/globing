@@ -13,7 +13,7 @@ const ReferenceUpload = () => {
   const [imgPreview, setImgPreview] = useState(null);
   const [editingId, setEditingId] = useState(null);
 
-  // Fetch references on load
+// Fetch all references
   useEffect(() => {
     const fetchReferences = async () => {
       try {
@@ -42,6 +42,7 @@ const ReferenceUpload = () => {
     }
   };
 
+// Reference EDIT
   const handleEdit = (ref) => {
     setTitle(ref.title);
     setDescription(ref.descr_sk);
@@ -74,7 +75,6 @@ const ReferenceUpload = () => {
 
       if (data.success) {
         if (editingId) {
-          // Update the edited reference in the list
           setReferences((prevReferences) =>
             prevReferences.map((ref) =>
               ref._id === editingId ? data.data : ref
@@ -100,14 +100,41 @@ const ReferenceUpload = () => {
     }
   };
 
+  // Reset form on CANCEL button when EDITING
+  const resetForm = () => {
+    setTitle('');
+    setDescription('');
+    setFile(null);
+    setImgPreview(null);
+    setEditingId(null);
+  };
+  
+
   return (
-    <main>
+    <main className={styles.adminMain}>
       <div>
-        <h1>Referencie admin panel</h1>
+      <h2>Referencie admin panel</h2>
         <form onSubmit={handleSubmit} encType="multipart/form-data">
+        
+         <div>
+        {imgPreview && (
+              <div style={{ marginTop: '20px' }}>
+                <img src={imgPreview} alt="Preview" className={styles.imgPreview} />
+              </div>
+        )}
+            <input
+              className={styles.adminPanel_form_img}
+              type="file"
+              id="file"
+              onChange={handleFileChange}
+            />
+          </div>
+
+        <div>
           <div>
             <label htmlFor="title">Title</label>
             <input
+              className={styles.adminPanel_form_title}
               type="text"
               id="title"
               value={title}
@@ -119,6 +146,7 @@ const ReferenceUpload = () => {
           <div>
             <label htmlFor="descr_sk">Description</label>
             <textarea
+              className={styles.adminPanel_form_decr}
               id="descr_sk"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -126,29 +154,23 @@ const ReferenceUpload = () => {
             />
           </div>
 
-          <div>
-            <input
-              type="file"
-              id="file"
-              onChange={handleFileChange}
-            />
+          <div className={styles.formBtn}>
+            <button className={`${styles.button} ${styles.formBtn_submit_edit}`} type="submit">{editingId ? 'Update' : 'Save'}</button>
+              {editingId && (
+            <button className={`${styles.button} ${styles.formBtn_cancel}`} type="button" onClick={resetForm}>Cancel</button>
+              )}
           </div>
-
-          {imgPreview && (
-            <div style={{ marginTop: '20px' }}>
-              <img src={imgPreview} alt="Preview" className={styles.previewImg} />
-            </div>
-          )}
-
-          <button type="submit">{editingId ? 'Update' : 'Submit'}</button>
+          </div>
         </form>
+      </div>
 
         <ReferenceList
           references={references}
           setReferences={setReferences}
           onEdit={handleEdit}
+          showButtons={true}
         />
-      </div>
+      
     </main>
   );
 };

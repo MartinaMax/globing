@@ -18,7 +18,8 @@ const referenceSchema = new mongoose.Schema(
             type: String,
             required: true,
         }
-    }
+    },
+    { timestamps: true }
 );
 
 export default mongoose.models.Reference || mongoose.model('Reference', referenceSchema)
