@@ -1,0 +1,24 @@
+@use '../../variables' as *;
+
+.adminLogin {
+    justify-items: center;
+    color: $blackish;
+
+
+    h2 {
+        font-size: $h2-big;
+        text-align: center;
+    }
+
+    .formLogin{
+        width: 350px;
+        padding: 100px 50px;
+        background-color: #F2F2F2;
+        
+
+        input {
+            background-color: transparent;
+        }
+    }
+
+}
