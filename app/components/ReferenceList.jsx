@@ -2,8 +2,32 @@
 
 import styles from '@/styles/styles.module.scss';
 import EditDeleteBtn from './admin/EditDeleteBtn';
+import { useEffect, useState } from 'react';
 
-const ReferenceList = ({ references = [], setReferences, onEdit, showButtons }) => {
+const ReferenceList = ({ showButtons = false, onEdit }) => {
+  const [references, setReferences] = useState([]);
+
+  // Fetch all references
+  useEffect(() => {
+    const fetchReferences = async () => {
+      try {
+        const res = await fetch('/api/reference');
+        const data = await res.json();
+        if (data.success) {
+          setReferences(data.data);
+        } else {
+          console.error('Failed to fetch references');
+        }
+      } catch (error) {
+        console.error('Error fetching references:', error.message);
+      }
+    };
+
+    fetchReferences();
+  }, []);
+
+
+ // DELETE a reference
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this reference?');
     if (!confirmDelete) return;
