@@ -1,0 +1,50 @@
+@use '../../variables' as *;
+.adminMain {
+
+        h2 {
+            font-size: $h2-big;
+            text-align: center;
+            margin-bottom: $space50;
+        }
+    
+        .imgPreview {
+            max-width: 400px;
+            max-height: 250px;
+        }
+    
+        form {
+            margin-bottom: $space100;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        
+            div {
+                display: grid;
+                margin-bottom: $space15;
+                
+                .adminPanel_form_title {
+                    width: 400px;
+                }
+            
+                .adminPanel_form_descr {
+                    height: 70px;
+                    width: 600px;
+                }
+            
+                .adminPanel_form_img {
+                    align-self: end;
+                    border-bottom: none;
+                }
+            }
+        } 
+
+}
+
+
+
+
+
+
+
+
+
+

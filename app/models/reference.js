@@ -8,7 +8,7 @@ const referenceSchema = new mongoose.Schema(
             max: 255
         },
 
-        descr: {
+        descr_sk: {
             type: String,
             required: true,
             max: 500
@@ -16,9 +16,10 @@ const referenceSchema = new mongoose.Schema(
 
         img_url: {
             type: String,
-            required: true
+            required: true,
         }
-    }
+    },
+    { timestamps: true }
 );
 
 export default mongoose.models.Reference || mongoose.model('Reference', referenceSchema)
