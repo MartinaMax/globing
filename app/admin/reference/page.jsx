@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import ReferenceList from '@/components/ReferenceList';
 import styles from '@/styles/styles.module.scss';
 
-const ReferenceUpload = () => {
+const ReferenceAdminPanel = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [file, setFile] = useState(null);
@@ -12,25 +12,6 @@ const ReferenceUpload = () => {
   const [references, setReferences] = useState([]);
   const [imgPreview, setImgPreview] = useState(null);
   const [editingId, setEditingId] = useState(null);
-
-// Fetch all references
-  useEffect(() => {
-    const fetchReferences = async () => {
-      try {
-        const res = await fetch('/api/reference');
-        const data = await res.json();
-        if (data.success) {
-          setReferences(data.data);
-        } else {
-          console.error('Failed to fetch references');
-        }
-      } catch (error) {
-        console.error('Error fetching references:', error.message);
-      }
-    };
-
-    fetchReferences();
-  }, []);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -175,7 +156,7 @@ const ReferenceUpload = () => {
   );
 };
 
-export default ReferenceUpload;
+export default ReferenceAdminPanel;
 
 
 
