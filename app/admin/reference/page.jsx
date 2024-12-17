@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import ReferenceList from '@/components/ReferenceList';
 import styles from '@/styles/styles.module.scss';
+import LogOutBtn from '@/components/admin/LogOutBtn';
 
 const ReferenceAdminPanel = () => {
   const [title, setTitle] = useState('');
@@ -92,7 +93,11 @@ const ReferenceAdminPanel = () => {
   
 
   return (
-    <main className={styles.adminMain}>
+    <>
+    <header>
+        <LogOutBtn/>
+    </header>
+    <main style={{ padding: '50px 170px'}} className={styles.adminMain}>
       <div>
       <h2>Referencie admin panel</h2>
         <form onSubmit={handleSubmit} encType="multipart/form-data">
@@ -153,6 +158,8 @@ const ReferenceAdminPanel = () => {
         />
       
     </main>
+    </>
+    
   );
 };
 

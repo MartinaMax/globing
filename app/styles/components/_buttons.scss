@@ -69,6 +69,21 @@
 
 
 // Admin panel 
+// Log out button
+.LogInBtn {
+    width: 100%;
+    height: 50px;
+    background-color: $blue;
+}
+
+.LogOutBtn {
+    display: block;
+    height: 70px;
+    width: 200px;
+    background-color: $coral;
+    justify-self: end;
+}
+
 // Form SUBMIT, EDIT & CANCEL buttons
 .formBtn {
     grid-template-columns: 3fr 1fr;
