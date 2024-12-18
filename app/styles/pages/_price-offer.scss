@@ -104,7 +104,7 @@
                 background: $coral;
               }
             }
-          }
+        }
     }
     
     .containerPhone {
@@ -156,9 +156,10 @@
 
                     }
                 }
-            }
-            .containerPhone {
-                font-size: $h2-small;
-            }
+        }
+
+        .containerPhone {
+            font-size: $h2-small;
+        }
     }
 }

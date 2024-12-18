@@ -16,7 +16,7 @@ const Hero = ({phoneImage, backgroundImage, title, subtitle }) => {
             <div className={styles.heroOverlay}></div>
 
             {/* Content */}
-            <div className={styles.hero_content}>
+            <div className={styles.heroContent}>
                 <h1>{title}</h1>
                 <h2>{subtitle}</h2>
                 <img className={styles.arrow_down} src="svg/arrow-white.svg" alt="" />

@@ -8,7 +8,7 @@ const referenceSchema = new mongoose.Schema(
             max: 255
         },
 
-        descr_sk: {
+        descr_en: {
             type: String,
             required: true,
             max: 500

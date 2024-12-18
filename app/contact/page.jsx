@@ -9,7 +9,7 @@ import styles from '@/styles/styles.module.scss';
 
 
 const ContactPage = () => {
-
+    
     return (
         <>
             <header>
@@ -78,7 +78,7 @@ const ContactPage = () => {
             </main>
             <Footer/>
         </>
-  );
+    );
 };
 
 export default ContactPage;

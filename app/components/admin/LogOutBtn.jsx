@@ -1,3 +1,5 @@
+'use client';
+
 import styles from '@/styles/styles.module.scss';
 import { useRouter } from 'next/navigation';
 
@@ -14,6 +16,6 @@ const LogOutBtn = () => {
         <button className={styles.LogOutBtn} onClick={handleLogout}>Logout</button>
       </nav>
     );
-  };
+};
   
-  export default LogOutBtn;
+export default LogOutBtn;

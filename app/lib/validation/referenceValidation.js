@@ -7,7 +7,7 @@ export const referenceValidation = (data) => {
         title: Joi.string()
                   .max(255)
                   .required(),
-        descr: Joi.string()
+        descr_en: Joi.string()
                   .max(500)
                   .required(),
         img_url: Joi.string()

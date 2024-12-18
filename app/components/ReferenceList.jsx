@@ -5,78 +5,75 @@ import EditDeleteBtn from './admin/EditDeleteBtn';
 import { useEffect, useState } from 'react';
 
 const ReferenceList = ({ showButtons = false, onEdit }) => {
-  const [references, setReferences] = useState([]);
+    const [references, setReferences] = useState([]);
 
-  // Fetch all references
-  useEffect(() => {
-    const fetchReferences = async () => {
-      try {
-        const res = await fetch('/api/reference');
-        const data = await res.json();
-        if (data.success) {
-          setReferences(data.data);
-        } else {
-          console.error('Failed to fetch references');
+    // Fetch all references
+    useEffect(() => {
+        const fetchReferences = async () => {
+            try {
+                const res = await fetch('/api/reference');
+                const data = await res.json();
+            
+                if (data.success) {
+                    setReferences(data.data);
+                } else {
+                    console.error('Failed to fetch references');
+                }
+            } catch (error) {
+                console.error('Error fetching references:', error.message);
+            }
+        };
+
+        fetchReferences();
+    }, []);
+
+
+    // DELETE a reference
+    const handleDelete = async (id) => {
+        const confirmDelete = window.confirm('Are you sure you want to delete this reference?');
+        if (!confirmDelete) return;
+
+        try {
+            const res = await fetch(`/api/reference/${id}`, {
+                method: 'DELETE',
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                setReferences((prevReferences) => prevReferences.filter((ref) => ref._id !== id));
+            } else {
+                console.error('Failed to delete reference');
+            }
+        } catch (error) {
+            console.error(error.message);
         }
-      } catch (error) {
-        console.error('Error fetching references:', error.message);
-      }
     };
 
-    fetchReferences();
-  }, []);
+    return (
+        <div>
+            {references && references.length > 0 ? (
+                <ul className={styles.referencesDisplay}>
+                    {references.map((ref) => (
+                        <li key={ref._id}>
+                            <img src={ref.img_url} alt={ref.title} style={{ maxWidth: '80px', maxHeight: '60px' }}/>
+                            <p>{ref.title}</p>
+                            <p>{ref.descr_sk}</p>
 
-
- // DELETE a reference
-  const handleDelete = async (id) => {
-    const confirmDelete = window.confirm('Are you sure you want to delete this reference?');
-    if (!confirmDelete) return;
-
-    try {
-      const res = await fetch(`/api/reference/${id}`, {
-        method: 'DELETE',
-      });
-      const data = await res.json();
-
-      if (data.success) {
-        setReferences((prevReferences) => prevReferences.filter((ref) => ref._id !== id));
-      } else {
-        console.error('Failed to delete reference');
-      }
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
-
-  return (
-    <div>
-      {references && references.length > 0 ? (
-        <ul className={styles.referencesDisplay}>
-          {references.map((ref) => (
-            <li key={ref._id}>
-              <img
-                src={ref.img_url}
-                alt={ref.title}
-                style={{ maxWidth: '80px', maxHeight: '60px' }}
-              />
-              <p>{ref.title}</p>
-              <p>{ref.descr_sk}</p>
-
-              {showButtons && (
-                <EditDeleteBtn
-                  ref={ref}
-                  onEdit={() => onEdit(ref)} // Trigger the edit
-                  onDelete={() => handleDelete(ref._id)} // Trigger the delete
-                />
-              )}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No references found</p>
-      )}
-    </div>
-  );
+                            {showButtons && (
+                                <EditDeleteBtn
+                                    ref={ref}
+                                    onEdit={() => onEdit(ref)} // Trigger the edit
+                                    onDelete={() => handleDelete(ref._id)} // Trigger the delete
+                                />
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+            <p>No references found</p>
+            )}
+        </div>
+    );
 };
 
 export default ReferenceList;

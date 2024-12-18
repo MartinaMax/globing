@@ -18,34 +18,34 @@ export async function GET(request) {
 
 // POST endpoint
 export async function POST(request) {
-  await dbConnect();
+  	await dbConnect();
 
-  try {
-    const formData = await request.formData();
-    const title = formData.get('title');
-    const descr_sk = formData.get('descr_sk');
-    const file = formData.get('file');
+  	try {
+    	const formData = await request.formData();
+    	const title = formData.get('title');
+    	const descr_en = formData.get('descr_en');
+    	const file = formData.get('file');
 
-    if (file && file.size === 0) {
-        return NextResponse.json({ success: false, message: 'Empty file uploaded' }, { status: 400 });
-    }
+    	if (file && file.size === 0) {
+        	return NextResponse.json({ success: false, message: 'Empty file uploaded' }, { status: 400 });
+    	}
 
-    // Save the file to the /uploads directory
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
-    if (!fs.existsSync(uploadsDir)) {
-      fs.mkdirSync(uploadsDir, { recursive: true });
-    }
+    	// Save the file to the /uploads directory
+    	const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+    	if (!fs.existsSync(uploadsDir)) {
+      		fs.mkdirSync(uploadsDir, { recursive: true });
+    	}
 
-    const filePath = path.join(uploadsDir, file.name);
-    const arrayBuffer = await file.arrayBuffer();
-    fs.writeFileSync(filePath, Buffer.from(arrayBuffer));
+    	const filePath = path.join(uploadsDir, file.name);
+    	const arrayBuffer = await file.arrayBuffer();
+    	fs.writeFileSync(filePath, Buffer.from(arrayBuffer));
 
-    // Add to database
-    const imgUrl = `/uploads/${file.name}`;
-    const reference = await Reference.create({ title, descr_sk, img_url: imgUrl });
+    	// Add to database
+    	const imgUrl = `/uploads/${file.name}`;
+    	const reference = await Reference.create({ title, descr_en, img_url: imgUrl });
 
-    return NextResponse.json({ success: true, data: reference }, { status: 201 });
-  } catch (error) {
-    return NextResponse.json({ success: false, message: error.message }, { status: 500 });
-  }
+    	return NextResponse.json({ success: true, data: reference }, { status: 201 });
+  	} catch (error) {
+    	return NextResponse.json({ success: false, message: error.message }, { status: 500 });
+  	}
 }

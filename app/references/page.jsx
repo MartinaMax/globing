@@ -18,12 +18,12 @@ const ReferencesPage = () => {
         <main className={styles.mainReferences}>
             <h2>References</h2>
 
-        {/* References section */}
+            {/* References section */}
             <section>
                 <ReferenceList/>
             </section>
 
-        {/* Back to top button */}
+            {/* Back to top button */}
             <BackToTopBtn/>
       
         </main>
