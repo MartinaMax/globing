@@ -14,7 +14,7 @@
 /coverage
 
 # img 
-/public/*
+/public/uploads
 
 # next.js
 /.next/
