@@ -60,7 +60,7 @@ const HomePage = () => {
                 <section className={styles.containerReferences}>
                     <h2>References</h2>
                     <p className={styles.p_strong}>Check out our latest projects we've worked on</p>
-                    <ReferenceList/>
+                    <ReferenceList  maxReferences={3}/>
                     <Link href="/references" className={styles.goToPage}>
                         <p>All references</p>  
                         <img src="/svg/arrow-r.svg" alt="Arrow to right" />

@@ -4,18 +4,54 @@
     list-style: none;
     padding: 0;
     display: grid;
-     
+    overflow: hidden;  
+    
     li {
         display: grid;
-        grid-template-columns: 0.9fr 2fr 6fr 1fr;
-        justify-content: start;
+        grid-template-columns: 1fr 2fr;
+        justify-content: flex-start;
         align-items: center;
-        padding: 10px 0;
+        padding: 10px 10px;
         border-bottom: 1px solid $blackish;
     
         p {
-            font-size: $p-size;
+            font-size: $phone-p-size;
         }
+
+        img {
+            display: none;
+        }
+    }
+
+    @media (min-width: $breakpoint-large) {
+        li {
+            display: grid;
+            grid-template-columns: 0.9fr 2fr 6fr 1fr;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px ;
+            border-bottom: 1px solid $blackish;
+        
+            p {
+                font-size: $p-size;
+            }
     
+            img {
+                display: none;
+            }
+    
+            &:hover{                
+                img {
+                    overflow: hidden;
+                    justify-self: center;
+                    align-self: center;
+                    position: absolute;
+                    display: flex;
+                    z-index: 20;
+                    max-width: 400px;
+                    max-height: 400px;
+                }
+            }
+        }   
     }
 }

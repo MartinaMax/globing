@@ -7,7 +7,7 @@ import path from 'path';
 
 // PUT endpoint
 export async function PUT(request, { params }) {
-    const { id } = params;
+    const { id } = await params;
 
     if (!id) {
       return NextResponse.json({ success: false, message: 'ID is required' }, { status: 400 });
@@ -19,10 +19,10 @@ export async function PUT(request, { params }) {
     	// Parse form data
     	const formData = await request.formData();
     	const title = formData.get('title');
-    	const descr_sk = formData.get('descr_sk');
+    	const descr_en = formData.get('descr_en');
     	const file = formData.get('file');
 
-    	if (!title || !descr_sk) {
+    	if (!title || !descr_en) {
       		return NextResponse.json({ success: false, message: 'Title and description are required' }, { status: 400 });
     	}
 
@@ -79,7 +79,7 @@ export async function PUT(request, { params }) {
 // DELETE endpoint
 export async function DELETE(request, {params}) {
 
-    const {id} = params;
+    const {id} = await params;
 
     await dbConnect();
   

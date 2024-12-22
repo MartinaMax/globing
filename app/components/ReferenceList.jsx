@@ -4,7 +4,7 @@ import styles from '@/styles/styles.module.scss';
 import EditDeleteBtn from './admin/EditDeleteBtn';
 import { useEffect, useState } from 'react';
 
-const ReferenceList = ({ showButtons = false, onEdit }) => {
+const ReferenceList = ({ showButtons = false, onEdit, maxReferences = null }) => {
     const [references, setReferences] = useState([]);
 
     // Fetch all references
@@ -27,7 +27,6 @@ const ReferenceList = ({ showButtons = false, onEdit }) => {
         fetchReferences();
     }, []);
 
-
     // DELETE a reference
     const handleDelete = async (id) => {
         const confirmDelete = window.confirm('Are you sure you want to delete this reference?');
@@ -49,15 +48,22 @@ const ReferenceList = ({ showButtons = false, onEdit }) => {
         }
     };
 
+    // Limit the number of references displayed if maxReferences is passed
+    const displayedReferences = maxReferences ? references.slice(0, maxReferences) : references;
+
     return (
         <div>
-            {references && references.length > 0 ? (
+            {displayedReferences && displayedReferences.length > 0 ? (
                 <ul className={styles.referencesDisplay}>
-                    {references.map((ref) => (
+                    {displayedReferences.map((ref) => (
                         <li key={ref._id}>
-                            <img src={ref.img_url} alt={ref.title} style={{ maxWidth: '80px', maxHeight: '60px' }}/>
+                                <img
+                                    src={ref.img_url}
+                                    alt={ref.title}
+                                    //style={{ maxWidth: '80px', maxHeight: '60px' }}
+                                />
                             <p>{ref.title}</p>
-                            <p>{ref.descr_sk}</p>
+                            <p>{ref.descr_en}</p>
 
                             {showButtons && (
                                 <EditDeleteBtn
@@ -70,7 +76,7 @@ const ReferenceList = ({ showButtons = false, onEdit }) => {
                     ))}
                 </ul>
             ) : (
-            <p>No references found</p>
+                <p>No references found</p>
             )}
         </div>
     );
