@@ -12,9 +12,9 @@ const PriceOfferPage = () => {
   	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   	const [selectedOption, setSelectedOption] = useState("Choose an option");
   	const dropdownItems = [
-    	"VYTYČENIE POZEMKU",
-    	"VYHOTOVENIE GEOMETRICKÉHO PLÁNU POLOHOPISNÉ A VÝSKOPISNÉ ZAMERANIE",
-    	"INE"
+    	"Layout of the land construction",
+    	"Creation of geometric plans planimetric and hypsometric focus",
+    	"Other"
   	];
 
   	const dropdownRef = useRef(null);
@@ -53,39 +53,39 @@ const PriceOfferPage = () => {
 
 			{/* Main */}
       		<main className={styles.mainPrice}>
-        		<h2>Žiadosť o cenovú ponuku</h2>
+        		<h2>Price offer</h2>
 
         		{/* Services & Price offer form section */}
         		<section className={styles.containerServicesPrice}>
           			{/* Services */}
           				<article className={styles.articleServices}>
-            				<h2>Služby:</h2>
+            				<h2>Services:</h2>
 
             				<div>
-              					<p className={styles.p_strong}>Kataster nehnuteľností</p>
+              					<p className={styles.p_strong}>Real estate cadastre</p>
               					<ul>
-                					<li>vyhotovenie geometrických plánov</li>
-                					<li>vytýčenie hraníc pozemkov</li>
-                					<li>vyhotovenie elaborátu adresného bodu</li>
+                					<li>execution of geometric plans</li>
+                					<li>demarcation of land boundaries</li>
+                					<li>preparation of the elaboration of the address point</li>
               					</ul>
             				</div>
 
             				<div>
-              					<p className={styles.p_strong}>Inžinierska geodézia</p>
+              					<p className={styles.p_strong}>Engineer surveying</p>
               					<ul>
-                					<li>vytýčenie stavieb</li>
-                					<li>budovanie vytyčovacích sietí</li>
-                					<li>vyhotovenie účelových máp veľkých mierok</li>
-                					<li>zameranie podzemných a nadzemných vedení</li>
-                					<li>kontrolné merania a zamerania skutočného vyhotovenia stavebných objektov</li>
-                					<li>geometrické zameranie a vyhotovenie dokumentácie skutočného stavu budov</li>
-                					<li>meranie posunov stavebných objektov</li>
-                					<li>zameranie žeriavových dráh 3D modely objektov</li>
+                					<li>demarcation of buildings</li>
+                					<li>building staking networks</li>
+                					<li>preparation of purpose-built large-scale maps</li>
+                					<li>orientation of underground and overhead lines</li>
+                					<li>control measurements and measurements of the actual execution of construction objects</li>
+                					<li>geometric orientation and documentation of the real state of the buildings</li>
+                					<li>measurement of displacements of construction objects</li>
+                					<li>alignment of crane tracks 3D models of objects</li>
               					</ul>
             				</div>
 
             				<div>
-              					<p className={styles.p_strong}>Projekty pozemkových úprav</p>
+              					<p className={styles.p_strong}>Land improvement projects</p>
             				</div>
           				</article>
 
@@ -152,14 +152,14 @@ const PriceOfferPage = () => {
                 					<textarea name="message" id="message"></textarea>
               					</div>
 
-              					<button className={styles.submitBtn}>Submit</button>
+              					<button className={styles.submitBtn}>Send</button>
             				</form>
           				</article>
         		</section>
 
         		{/* Contact Section */}
         		<section>
-          			<PhoneNmbrContact title="Alebo nás kontaktujte" />
+          			<PhoneNmbrContact title="Do you need more information?"/>
         		</section>
 
         		{/* Back to top button */}

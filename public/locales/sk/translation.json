@@ -1,0 +1,148 @@
+{
+    "nav": {
+        "contact": "Kontakt",
+        "price_offer": "Cenová ponuka",
+        "ref": "Referencie"
+    },
+
+    "hero": {
+        "home": {
+            "title": "Globing Poprad s.r.o",
+            "subtitle": "Geodetické a kartografické práce"
+        },
+
+        "price_offer": {
+            "title": "Cenová ponuka"
+        },
+
+        "reference": {
+            "title": "Referencie"
+        },
+
+        "contact": {
+            "title": "Kontakt"
+        }
+    },
+
+    "phone_nmbr": {
+        "question_": {
+            "question": "Potrebujete vyhotoviť geometrický plán alebo vytýčiť hranicu pozemku?",
+            "name_1": "Ing. Vladimír Kochan",
+            "contact_1": "0905273309",
+            "name_2": "Ing. Juraj Kubičár",
+            "contact_2": "0905273310"
+        },
+        "question_2": {
+            "question": "Potrebujete vytýčiť stavbu, polohopisné a výškopisné zameranie či iné prace v oblasti inžinierskej geodézie? ",
+            "name_1": "Ing. Vlastimil Maxim",
+            "contact_1": "0905273312"
+        },
+        "question_3": {
+            "question": "Potrebujete vyhotoviť projekt pozemkových úpra",
+            "name_1": "Ing. Juraj Kubičár",
+            "contact_1": "0905273310"
+        }
+    },
+    
+    "footer": {
+        "bussines_registry": "Zápis v obch. registri:",
+        "reg_nmbr": "Číslo zápisu:",
+        
+
+        "contact": "Kontakt",
+        "phone_fax": "Telefón, fax:",
+        "mobile": "Mobil:",
+        "email": "E-mail:",
+
+        "protection_of_data": "Ochrana osobných údajov",
+        "cookie_policy": "Zásady používania súborov cookies",
+        
+        "copyright": "© 2024 GLOBING POPRAD s.r.o. Všetky práva vyhradené."
+    },
+
+    "home": {
+        "quote": "V oblasti geodézie a kartografie máme dlhoročné skúsenosti a naša firma disponuje modernou meračskou a výpočtovou technikou, pomocou ktorej používa len najnovšie geodetické technológie a vyhodnocovacie postupy.",
+        
+        "services": {
+            "title": "Služby",
+            "text": "Spoločnosť GLOBING POPRAD s.r.o. vznikla v marci 1997 a na slovenskom trhu geodetických prác sa radíme medzi stredne veľké spoločnosti. Ponúkame široké spektrum služieb v oblasti geodézie akartografie.",
+            "service_1": "Kataster nehnuteľností",
+            "service_2": "Inžinierska geodézia",
+            "service_3": "Projekty pozemkových úprav"
+        },
+
+        "price_offer": {
+            "title": "Nechajte si od nás urobiť cenovú ponuku",
+            "text_1": "Aby firma mohla zabezpečiť 100% kvalitu všetkých vykonaných prác od začiatku presadzuje tendenciu zamestnávať iba špičkovo vysokoškolsky vzdelaných odborníkov, čo umožňuje na vykonané práce poskytnúť časovo neobmedzenú záruku.",
+            "text_2": "Naši pracovníci sú členmi <link_1>KOMORY GEODETOV A KARTOGRAFOV</link_1> a <link_2>KOMORY POZEMKOVÝCH ÚPRAV</link_2>. Spoločnosť je vybavená špičkovou meračskou a výpočtovou technikou vrátane GPS aparatúr. Naša firma pri spracovaní výsledkov merania a vytváraní geodetických elaborátov využíva grafický systém MicroStation a KOKEŠ.",
+            "button": "Žiadosť o cenovú ponuku"
+        },
+
+        "references": {
+            "title": "Referencie",
+            "subtitle": "Pozrite si nase posledné projekty, na ktorých sme pracovali",
+            "button": "Všetky referencie"
+        }
+    },
+
+    "price_offer": {
+        "title_1": "Cenová ponuka",
+        "services": {
+            "service_1": {
+                "title": "Kataster nehnuteľností",
+                "li_1": "vyhotovenie geometrických plánov",
+                "li_2": "vytýčenie hraníc pozemkov",
+                "li_3": "vyhotovenie elaborátu adresného bodu"
+            },
+            "service_2": {
+                "title": "Inžinierska geodézia",
+                "li_1": "vytýčenie stavieb",
+                "li_2": "budovanie vytyčovacích sietí",
+                "li_3": "vyhotovenie účelových máp veľkých mierok",
+                "li_4": "zameranie podzemných a nadzemných vedení",
+                "li_5": "kontrolné merania a zamerania skutočného vyhotovenia stavebných objektov",
+                "li_6": "geometrické zameranie a vyhotovenie dokumentácie skutočného stavu budov",
+                "li_7": "meranie posunov stavebných objektov",
+                "li_8": "zameranie žeriavových dráh 3D modely objektov"
+            },
+            "service_3": "Projekty pozemkových úprav"
+        },
+
+        "form": {
+            "name": "Meno*",
+            "surname": "Proiezvisko*",
+            "phone": "Tel. číslo*",
+            "email": "E-mail*",
+            "cadastral_territory": "Katastrálne územie*",
+            "parcel_numbr": "Parcel number*",
+            "municipality": "Obec*",
+            "subject": {
+                "subject": "Predmet",
+                "choose": "Vybrať",
+                "subject_1": "Vytyčenie pozemku vyhotovenie",
+                "subject_2": "Geometrického plánu polohopisné a výskopisné zameranie",
+                "subject_3": "Iné"
+            },
+            "message": "Správa",
+            "button": "Poslať"
+        },
+        "title_2": "Potrebujete viac informácií?"
+    },
+
+    "references": {
+        "title": "Referencie"
+    },
+
+    "contact": {
+        "title": "Kontaktujte alebo nás navštívte",
+        "form": {
+            "name": "Meno*",
+            "surname": "Proiezvisko*",
+            "phone": "Tel. číslo*",
+            "email": "E-mail*",
+            "subject": "Predmet", 
+            "message": "Správa",
+            "button": "Poslať"
+        }
+    }
+}
