@@ -77,7 +77,7 @@ const LoginForm = () => {
                             onChange={handleChange}
                         />
                     </div>
-                    <button className={styles.LogInBtn} type="submit">Login</button>
+                    <button className={styles.LogInBtn} type="submit">Log in</button>
                 </form>
             </div>
             {error && <p style={{ color: '#F15B40' }}>{error}</p>}

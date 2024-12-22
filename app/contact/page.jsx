@@ -20,7 +20,7 @@ const ContactPage = () => {
       
                 {/* Phone number contact Section */}
                 <section>
-                    <PhoneNmbrContact title="Kontaktujte alebo nás navštívte"/>
+                    <PhoneNmbrContact title="Contact or visit us"/>
                 </section>
 
                 {/* IMGs and Contact form section */}
@@ -68,7 +68,7 @@ const ContactPage = () => {
                                 <textarea name="message" id=""></textarea>
                             </div>
 
-                            <button className={styles.submitBtn}>Submit</button>
+                            <button className={styles.submitBtn}>Send</button>
                         </form>
                     </div>
                 </section>

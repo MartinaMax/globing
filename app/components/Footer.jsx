@@ -15,27 +15,27 @@ const Footer = () => {
                     <li>IČO: 36444499</li>
                     <li>DIČ: 2020016966</li>
                     <li>IČ DPH: SK2020016966</li>
-                    <li>Zápis v obch. registri: OR OS Prešov</li>
-                    <li>Číslo zápisu: vložka č. 10132/P</li>
+                    <li>Registration in business registries: OR OS Prešov</li>
+                    <li>Registration number: vložka č. 10132/P</li>
                     
                 </ul>
             </div>
 
         {/* Contact info section */}
             <div className={styles.containerContactInfo}>
-                <p className={styles.p_strong}>Kontakt</p>
+                <p className={styles.p_strong}>Contact</p>
                 <ul>
-                    <li>Tel., fax.: +421 52 7731 450</li>
-                    <li>Mobil: +421 905 273 309</li>
-                    <li> Mobil: +421 905 273 312</li>
+                    <li>Phone, fax.: +421 52 7731 450</li>
+                    <li>Mobile: +421 905 273 309</li>
+                    <li> Mobile: +421 905 273 312</li>
                     <li>E-mail: globing@globing.sk</li>
                 </ul>
             </div>
 
         {/* Consent section */}  
         <div className={styles.containerConsent}>
-            <a href="#">Ochrana osobných údajov</a>
-            <a href="#">Zásady používania súborov cookies</a>
+            <a href="#">Protection of personal data</a>
+            <a href="#">Policy for the use of cookies</a>
         </div>  
 
         {/* Copyright */}

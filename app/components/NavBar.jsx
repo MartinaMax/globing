@@ -69,7 +69,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         {!isMobile && (
             <nav className={styles.desktopMenu}>
-                <Link className={`${styles.desktopMenu_link1} ${isActive('/price-offer') ? styles.active : ""}`} href="/price-offer">Cenova ponuka</Link>
+                <Link className={`${styles.desktopMenu_link1} ${isActive('/price-offer') ? styles.active : ""}`} href="/price-offer">Price offer</Link>
                 <Link className={`${styles.desktopMenu_link2} ${isActive('/references') ? styles.active : ""}`} href="/references">References</Link>
                 <Link className={styles.contactBtn} href="/contact">Contact</Link>
             </nav>

@@ -98,7 +98,7 @@ const ReferenceAdminPanel = () => {
     		</header>
     		<main style={{ padding: '50px 170px'}} className={styles.adminMain}>
       			<div>
-      				<h2>Referencie admin panel</h2>
+      				<h2>Reference admin panel</h2>
         			<form onSubmit={handleSubmit} encType="multipart/form-data">
         
          				<div>
