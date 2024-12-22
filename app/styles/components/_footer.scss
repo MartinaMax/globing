@@ -7,6 +7,11 @@
     padding: 80px 22px 50px;
     text-align: center;
 
+    img {
+        width: 100%;
+        margin-bottom: $space30;
+    }
+
     div {
         margin-bottom: $space30;
     }
@@ -43,10 +48,16 @@
     @media (min-width: $breakpoint-large) {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: $space100;
+        column-gap: $space50;
         padding: 50px 170px 20px;
         text-align: unset;
         align-items: center;
+
+        img {
+            height: 245px;
+            width: unset;
+            margin-bottom: 0;
+        }
         
         .containerCompInfo {
             grid-column: 2/3;

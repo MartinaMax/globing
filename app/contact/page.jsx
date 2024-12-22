@@ -29,7 +29,7 @@ const ContactPage = () => {
                 {/* IMGs */}
                     <div className={styles.containerImg}>
                         <img src="/img/globing-building.jpg" alt="Photo of an entrance to GLOBING Poprad."/>
-                        <img src="#" alt="#" />
+                        <img src="/img/map.png" alt="Image of Globing Poprad on Google maps" />
                     </div>
 
                 {/* Contact form */}

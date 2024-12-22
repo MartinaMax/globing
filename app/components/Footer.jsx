@@ -6,6 +6,7 @@ const Footer = () => {
     return (
       <footer className={styles.footer}>
         {/* Map Section */}
+            <img src="/img/map.png" alt="Image of Globing Poprad on Google maps" />
 
         {/* Company info section */}
             <div className={styles.containerCompInfo}>
@@ -34,7 +35,7 @@ const Footer = () => {
 
         {/* Consent section */}  
         <div className={styles.containerConsent}>
-            <a href="#">Protection of personal data</a>
+            <a href="/pdf/ochrana_osobnych_udajov.pdf" target='_blank'>Protection of personal data</a>
             <a href="#">Policy for the use of cookies</a>
         </div>  
 
