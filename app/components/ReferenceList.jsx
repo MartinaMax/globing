@@ -48,7 +48,7 @@ const ReferenceList = ({ showButtons = false, onEdit, maxReferences = null }) =>
         }
     };
 
-    // Limit the number of references displayed if maxReferences is passed
+    // Limit the number of references displayed if maxReferences is passed (on Home page)
     const displayedReferences = maxReferences ? references.slice(0, maxReferences) : references;
 
     return (

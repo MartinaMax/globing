@@ -4,7 +4,6 @@
     list-style: none;
     padding: 0;
     display: grid;
-    overflow: hidden;  
     
     li {
         display: grid;
@@ -26,10 +25,10 @@
     @media (min-width: $breakpoint-large) {
         li {
             display: grid;
-            grid-template-columns: 0.9fr 2fr 6fr 1fr;
+            grid-template-columns: 1fr 2fr .5fr;
             justify-content: flex-start;
             align-items: center;
-            padding: 20px ;
+            padding: 20px;
             border-bottom: 1px solid $blackish;
         
             p {
@@ -52,6 +51,6 @@
                     max-height: 400px;
                 }
             }
-        }   
+        } 
     }
 }
