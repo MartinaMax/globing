@@ -43,15 +43,15 @@ const HomePage = () => {
             {/* Go to price offer section */}
                 <section className={styles.containerPriceOffer}>
                     <h2>Let us make you a price offer</h2>
-                    <img className={styles.containerPriceOffer_img1} src="/img/home-1.jpg" alt=""/>
+                    <img className={styles.containerPriceOffer_img1} src="/img/home-1.jpg" alt="Photo of surveyor on a machine."/>
                     <p className={styles.containerPriceOffer_p1}>In order for the company to be able to ensure 100% quality of all the work performed, from the beginning it promotes the tendency to employ only top university-educated experts, which makes it possible to provide a time-limited guarantee for the work performed.</p>
-                    <img className={styles.containerPriceOffer_img2} src="/img/home-2.jpg" alt="" />
+                    <img className={styles.containerPriceOffer_img2} src="/img/home-2.jpg" alt="Photo of surveyor machine on Leica on a building sight."/>
                     <div>
-                        <p className={styles.containerPriceOffer_p2}>Our workers are members of the <a href="#">CHAMBER OF SURVEYORS AND CARTOGRAPHERS</a> and the <a href="#">CHAMBER OF LAND ADMINISTRATION</a>. The company is equipped with top measuring and computing technology, including GPS devices. Our company uses the MicroStation graphic system and KOKEŠ when processing measurement results and creating geodetic reports.</p>
+                        <p className={styles.containerPriceOffer_p2}>Our workers are members of the <a href="https://kgk.sk/" target="_blank">CHAMBER OF SURVEYORS AND CARTOGRAPHERS</a> and the <a href="http://www.kpu.sk/" target="_blank">CHAMBER OF LAND ADMINISTRATION</a>. The company is equipped with top measuring and computing technology, including GPS devices. Our company uses the MicroStation graphic system and KOKEŠ when processing measurement results and creating geodetic reports.</p>
                     
                         <Link href="/price-offer" className={styles.goToPage}>
                             <p>Request price offer</p>  
-                            <img src="/svg/arrow-r.svg" alt=""/>
+                            <img src="/svg/arrow-r.svg" alt="Arrow to right"/>
                         </Link>
                     </div>
                 </section>
@@ -63,7 +63,7 @@ const HomePage = () => {
                     <ReferenceList  maxReferences={3}/>
                     <Link href="/references" className={styles.goToPage}>
                         <p>All references</p>  
-                        <img src="/svg/arrow-r.svg" alt="Arrow to right" />
+                        <img src="/svg/arrow-r.svg" alt="Arrow to right"/>
                     </Link>
                 </section>
 

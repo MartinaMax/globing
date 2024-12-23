@@ -6,7 +6,7 @@ const Footer = () => {
     return (
       <footer className={styles.footer}>
         {/* Map Section */}
-            <img src="/img/map.png" alt="Image of Globing Poprad on Google maps" />
+            <img src="/img/map.png" alt="Image of Globing Poprad on Google maps"/>
 
         {/* Company info section */}
             <div className={styles.containerCompInfo}>

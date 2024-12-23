@@ -60,7 +60,6 @@ const ReferenceList = ({ showButtons = false, onEdit, maxReferences = null }) =>
                                 <img
                                     src={ref.img_url}
                                     alt={ref.title}
-                                    //style={{ maxWidth: '80px', maxHeight: '60px' }}
                                 />
                             <p>{ref.title}</p>
                             <p>{ref.descr_en}</p>

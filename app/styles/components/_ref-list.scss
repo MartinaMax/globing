@@ -39,11 +39,10 @@
                 display: none;
             }
     
-            &:hover{                
+            &:hover{ 
                 img {
                     overflow: hidden;
                     justify-self: center;
-                    align-self: center;
                     position: absolute;
                     display: flex;
                     z-index: 20;
