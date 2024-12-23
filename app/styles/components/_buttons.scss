@@ -1,0 +1,130 @@
+@use '../variables' as *;
+
+
+// Back to top button on all pages
+.backToTop {
+    display: none; 
+
+    @media (min-width: $breakpoint-large) {
+        background-color: $coral;
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 60px;
+        justify-items: center;
+        align-content: center;
+        display: block;
+        position: absolute;
+        right: 50px;
+        cursor: pointer; 
+    }
+}
+
+// Go to page (tow buttons on home page)
+.goToPage {
+    justify-self: end;
+    width: fit-content;
+    border-radius: 0;
+    border: 2px solid $coral;
+    display: flex;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: $coral;
+    gap: $space15;
+    cursor: pointer; 
+
+    p {
+        font-weight: $text-strong;
+    }
+}
+
+// Submit button on forms
+.submitBtn {
+    background-color: $coral;
+    width: 100%;
+    padding: $space15;
+    font-size: $phone-p-size;
+    cursor: pointer; 
+    
+    @media (min-width: $breakpoint-large) {
+        display: block;
+        justify-self: end;
+        align-self: end;
+        width: 150px;
+    }
+}
+
+// Contact button in desktop navigation
+.contactBtn {
+    @media (min-width: $breakpoint-large) {
+        background-color: $coral;
+        display: block;
+        text-align: center;
+        align-content: center;
+        justify-self: end;
+        width: 170px;
+        height: 70px;
+    }
+}
+
+
+// Admin panel 
+// Log out button
+.LogInBtn {
+    width: 100%;
+    height: 50px;
+    background-color: $blue;
+}
+
+.LogOutBtn {
+    display: block;
+    height: 70px;
+    width: 200px;
+    background-color: $coral;
+    justify-self: end;
+}
+
+// Form SUBMIT, EDIT & CANCEL buttons
+.formBtn {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: $space15;
+    justify-items: end;
+    
+    &_submit_edit, &_cancel {
+        padding: $space15;
+        font-size: $phone-p-size;
+        display: block;
+        width: 150px;
+        grid-row: 1/2;
+    }
+
+    &_submit_edit {
+        grid-column: 2/3;
+        background-color: $coral;
+    }
+
+    &_cancel {
+        grid-column: 1/2;
+        background-color: $blue;
+    }
+}
+
+// EDIT & DELETE buttons
+.referenceBtn {
+    display: flex;
+    gap: $space15;
+
+    &_edit, &_delete {
+        width: 100px;
+        height: 45PX;
+    }
+
+    &_edit {
+        background-color: $blue;
+    }
+
+    &_delete {
+        background-color: $coral;
+    }
+}

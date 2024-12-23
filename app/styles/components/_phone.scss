@@ -1,0 +1,29 @@
+@use '../variables' as *;
+
+.containerPhone {
+    text-align: center;
+    
+    div {
+        text-align: center;
+       
+        
+        div {
+            display: flex;
+            justify-content: center;
+            column-gap: 10px;
+            //margin-bottom: 0;
+
+            h2 {
+                margin: 0;
+            }
+
+            .h2_blue{
+                color: $blue;
+            }
+        }   
+    }
+}
+
+.containerPhone_margin {
+    margin-bottom: $space30;
+}

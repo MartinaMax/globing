@@ -1,50 +1,46 @@
-import dbConnect from '@/app/lib/mongodb';
-import Admin from '@/app/models/admin';
+import dbConnect from '@/lib/mongodb';
+import Admin from '@/models/admin';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { adminValidation } from '@/app/lib/validation/authValidation';
+import { adminValidation } from '@/lib/validation/authValidation';
 
-export default async function handler(req, res) {
-  // Connect to DB
-  await dbConnect();
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN;
 
-  if (req.method === 'POST') {
+export async function POST(req) {
     try {
-      const { error } = adminValidation(req.body);
+        // Connection to DB
+        await dbConnect();
 
-      // Validation errors
-      if (error) {
-        return res.status(400).json({ error: error.details[0].message });
-      }
+        const body = await req.json();
 
-      // Find admin by username
-      const admin = await Admin.findOne({ username: req.body.username });
-      if (!admin) {
-        return res.status(404).json({ error: 'Sorry. User not found' });
-      }
+        // Joi validate the body
+        const { error } = adminValidation(body);
+        if (error) {
+            return new Response(JSON.stringify({ error: error.details[0].message }), { status: 400 });
+        }
 
-      // Compare passwords
-      const isMatch = await bcrypt.compare(req.body.password, admin.password);
-      if (!isMatch) {
-        return res.status(400).json({ error: 'Invalid credentials' });
-      }
+        // Find the admin by username
+        const admin = await Admin.findOne({ username: body.username });
+            if (!admin) {
+            return new Response(JSON.stringify({ error: 'Sorry. User not found' }), { status: 404 });
+        }
 
-      // Generate JWT token
-      const token = jwt.sign(
-        { id: admin._id, username: admin.username },
-        process.env.JWT_SECRET,
-        { expiresIn: process.env.JWT_EXPIRES_IN }
-      );
+        // Compare passwords
+        const isMatch = await bcrypt.compare(body.password, admin.password);
+            if (!isMatch) {
+            return new Response(JSON.stringify({ error: 'Invalid credentials' }), { status: 400 });
+        }
 
-      // Send token to the client
-      res.status(200).json({
-        error: null,
-        data: { token },
-      });
+        // Generate a token
+        const token = jwt.sign(
+            { id: admin._id, username: admin.username },
+            JWT_SECRET,
+            { expiresIn: JWT_EXPIRES_IN }
+        );
+
+        return new Response(JSON.stringify({ error: null, data: { token } }), { status: 200 });
     } catch (err) {
-      res.status(500).json({ error: 'Server error', details: err.message });
+        return new Response(JSON.stringify({ error: 'Server error', details: err.message }), { status: 500 });
     }
-  } else {
-    res.status(405).json({ error: 'Method not allowed' });
-  }
 }

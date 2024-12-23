@@ -1,0 +1,147 @@
+{
+    "nav": {
+        "contact": "Contact",
+        "price_offer": "Price offer",
+        "ref": "References"
+    },
+
+    "hero": {
+        "home": {
+            "title": "Globing Poprad s.r.o",
+            "subtitle": "Surveyor and cartographic works"
+        },
+
+        "price_offer": {
+            "title": "Price offer"
+        },
+
+        "reference": {
+            "title": "References"
+        },
+
+        "contact": {
+            "title": "Contact"
+        }
+    },
+
+    "phone_nmbr": {
+        "question_": {
+            "question": "Do you need to draw up a geometric plan or mark the boundary of the land?",
+            "name_1": "Ing. Vladimír Kochan",
+            "contact_1": "0905273309",
+            "name_2": "Ing. Juraj Kubičár",
+            "contact_2": "0905273310"
+        },
+        "question_2": {
+            "question": "Do you need to mark out a building, geodesic and altimetry, or other works in the field of engineering surveying?",
+            "name_1": "Ing. Vlastimil Maxim",
+            "contact_1": "0905273312"
+        },
+        "question_3": {
+            "question": "Do you need a land improvement project?",
+            "name_1": "Ing. Juraj Kubičár",
+            "contact_1": "0905273310"
+        }
+    },
+    
+    "footer": {
+        "bussines_registry": "Registration in business registries:",
+        "reg_nmbr": "Registration number:",
+        
+        "contact": "Contact",
+        "phone_fax": "Phone, fax:",
+        "mobile": "Mobile:",
+        "email": "E-mail:",
+
+        "protection_of_data": "Protection of personal data",
+        "cookie_policy": "Policy for the use of cookies",
+        
+        "copyright": "© 2024 GLOBING POPRAD s.r.o. All rights reserved."
+    },
+
+    "home": {
+        "quote": "We have many years of experience in the field of geodesy and cartography, and our company has modern measuring and calculation technology, with which it uses only the latest geodetic technologies and evaluation procedures.",
+        
+        "services": {
+            "title": "Services",
+            "text": "The company GLOBING POPRAD s.r.o. was established in March 1997 and we are among medium-sized companies on the Slovak geodetic works market. We offer a wide range of services in the field of geodesy and cartography.",
+            "service_1": "Real estate cadastre",
+            "service_2": "Engineer surveying",
+            "service_3": "Land improvement projects"
+        },
+
+        "price_offer": {
+            "title": "Let us make you a price offer",
+            "text_1": "In order for the company to be able to ensure 100% quality of all the work performed, from the beginning it promotes the tendency to employ only top university-educated experts, which makes it possible to provide a time-limited guarantee for the work performed.",
+            "text_2": "Our workers are members of the <link_1>CHAMBER OF SURVEYORS AND CARTOGRAPHERS</link_1> and the <link_2>CHAMBER OF LAND ADMINISTRATION</link_2>. The company is equipped with top measuring and computing technology, including GPS devices. Our company uses the MicroStation graphic system and KOKEŠ when processing measurement results and creating geodetic reports.",
+            "button": "Request price offer"
+        },
+
+        "references": {
+            "title": "References",
+            "subtitle": "Check out our latest projects we've worked on",
+            "button": "All references"
+        }
+    },
+
+    "price_offer": {
+        "title_1": "Price offer",
+        "services": {
+            "service_1": {
+                "title": "Real estate cadastre",
+                "li_1": "execution of geometric plans",
+                "li_2": "demarcation of land boundaries",
+                "li_3": "preparation of the elaboration of the address point"
+            },
+            "service_2": {
+                "title": "Engineer surveying",
+                "li_1": "demarcation of buildings",
+                "li_2": "building staking networks",
+                "li_3": "preparation of purpose-built large-scale maps",
+                "li_4": "orientation of underground and overhead lines",
+                "li_5": "control measurements and measurements of the actual execution of construction objects",
+                "li_6": "geometric orientation and documentation of the real state of the buildings",
+                "li_7": "measurement of displacements of construction objects",
+                "li_8": "alignment of crane tracks 3D models of objects"
+            },
+            "service_3": "Land improvement projects"
+        },
+
+        "form": {
+            "name": "Name*",
+            "surname": "Surname*",
+            "phone": "Phone number*",
+            "email": "E-mail*",
+            "cadastral_territory": "Cadastral territory*",
+            "parcel_numbr": "Parcel number*",
+            "municipality": "Municipality*",
+            "subject": {
+                "subject": "Subject",
+                "choose": "Choose an option",
+                "subject_1": "Layout of the land construction",
+                "subject_2": "Creation of geometric plans planimetric and hypsometric focus",
+                "subject_3": "Other"
+            },
+            "message": "Message",
+            "button": "Send"
+        },
+        "title_2": "Do you need more information?"
+    },
+
+    "references": {
+        "title": "References"
+    },
+
+    "contact": {
+        "title": "Contact or visit us",
+        "form": {
+            "name": "Name*",
+            "surname": "Surname*",
+            "phone": "Phone number*",
+            "email": "E-mail*",
+            "subject": "Subject", 
+            "message": "Message",
+            "button": "Send"
+        }
+    }
+}

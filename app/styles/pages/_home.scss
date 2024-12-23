@@ -1,0 +1,241 @@
+@use '../variables' as *;
+
+// Quote section
+.containerQuote {
+    font-size: $phone-h2-small;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: $space80;
+
+    p {
+        color: $blue;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $h2-small;
+        text-align: justify;
+        padding: 0 160px;
+        margin-bottom: $space150;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+// Services section
+.containerServices {
+    justify-self: center;
+    text-align: center;
+    margin-bottom: $space80;
+
+    h2 {
+        font-size: $phone-h2-big;
+    }
+
+    p {
+        padding: 0 20px;
+        margin-bottom: $space30;
+    }
+
+    div {
+        display: block;
+        align-content: center;
+        height: 115px;
+        font-size: $phone-h2-small;
+        color: $white;
+        margin-bottom: $space15;
+
+        
+        h2 {
+            font-size: $phone-h2-small;
+            margin: 0;
+        }
+    }
+
+    &_service1, &_service2, &_service3 {
+        background-repeat: none;
+        background-size: cover;
+        position: relative;
+        
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;            
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1; 
+          }
+        
+          /* Ensures content inside is above the overlay */
+          > * {
+            position: relative;
+            z-index: 2;
+          }
+
+    }
+
+    &_service1 {
+        background-image: url('/img/service-1.jpg');
+        background-position: 20%;
+    }
+
+    &_service2 {
+        background-image: url('/img/service-2.jpg');
+        background-position: 40%;
+    }
+
+    &_service3 {
+        background-image: url('/img/service-3.jpg');
+        background-position: 40%;
+
+    }
+
+    @media (min-width: $breakpoint-large) {
+        align-items: center;
+        margin-bottom: $space150;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+        
+        h2 {
+            font-size: $h2-big;
+            grid-column: 1/4;
+        }
+    
+        p {
+            padding: 0 50px;
+            margin-bottom: $space50;
+            grid-column: 1/4;
+            font-size: $p-size;
+        }
+
+        div {
+            display: flex;
+            justify-self: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            font-size: $h2-small;
+            color: $white;
+            width: 300px;
+            height: 300px;
+    
+            h2 {
+                font-size: $h2-small;
+                margin: 80px;
+            }
+        }
+
+        &_service1 {
+            background-position: 60%;
+        }
+
+        &_service2 {
+            background-position: 20%;
+        }
+    }
+}
+
+// Price offer section
+.containerPriceOffer {
+    text-align: justify;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: $space80;
+    
+    h2 {
+        font-size: $phone-h2-big;
+    }
+
+    &_img1, &_img2 {
+        display: block;
+        width: 100%;
+    }
+
+    &_p1, &_p2 {
+        padding: 30px 0;
+    }
+
+    p > a {
+        text-decoration: none;
+        color: $blue;
+    }
+    
+    p {
+        font-size: $phone-p-size;
+    }
+
+
+    @media (min-width: $breakpoint-large) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+        column-gap: $space50;
+        max-width: 945px;
+        text-align: left;
+        justify-self: center;
+        align-items: center;
+        margin-bottom: $space100;
+
+        h2 {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            font-size: $h2-big;
+        }
+
+        p {
+            font-size: $p-size;
+        }
+
+        &_p1 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &_p2 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+
+        &_img1{
+            grid-column: 2/3;
+            grid-row: 1/4;
+        }
+
+        &_img2{
+            grid-column: 1/2;
+            grid-row: 3/5;  
+        }
+
+        &_img1, &_img2 {
+            width: 445px;
+        }
+
+    }
+}
+
+// References section
+.containerReferences {
+    display: grid;
+    text-align: justify;
+    text-align: center;
+    margin-bottom: $space80;
+    font-size: $phone-h2-big;
+
+    .p_strong {
+        font-weight: $text-strong;
+        margin: 0;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: $h2-big;
+
+        .p_strong {
+            font-size: $h2-small;
+        }
+    }
+}

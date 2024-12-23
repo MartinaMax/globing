@@ -1,0 +1,178 @@
+@use '../variables' as *;
+
+.navbar {
+    position: absolute;
+    top: $space50;
+    width: 100%;
+    display: flex;
+    border: 1px solid $white;
+    border-left: none;
+    color: white;
+    z-index: 15;
+        
+    .containerLogo {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        padding: 15px 22px;
+        background:  rgba(1, 1, 1, 0.200);;
+
+        .logo {
+            width: 150px; 
+        }
+    }
+      
+    .containerIcon{
+        width: 10%;
+        border-left: solid 1px $white;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        padding: 15px 22px;
+    }
+  
+    .burgerIcon {
+        width: 40px;
+        height: 40px;
+    }
+}
+  
+// Mobile Dropdown Menu
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: $blue;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 16;
+  
+    &.dropdownVisible {
+        transform: translateY(0);
+    }
+  
+    .dropdownHeader {
+        margin: $space50 0;
+        width: 100%;
+        display: flex;
+        border: solid 1px $white;
+  
+        .logo {
+            width: 150px;
+            background-color: $white;
+        }
+
+        .dropdownLogo {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            padding: 15px 22px;
+        }
+
+        .containerIcon {
+            width: 10%;
+            border-left: solid 1px $white;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            padding: 15px 22px;
+        }
+  
+        .buttonClose {
+            width: 40px;
+            height: 40px;
+        }
+    }
+  
+    .navLinks {
+         display: flex;
+        flex-direction: column;
+        text-align: center;
+  
+        a {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            margin: 10px 0;
+            transition: color 0.3s;
+  
+            &:hover {
+                color: $coral;
+            }
+            
+            &.active {
+                color: $coral;
+            }
+        }
+
+        
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .navbar {
+        position: absolute;
+        top: 0;
+        border: none;
+        justify-content: space-between;
+        height: 100vh;
+
+        .containerLogo {
+            width: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background: rgba(1, 1, 1, 0.400);
+            padding: 50px 0 0 0;
+            border-right: 2px solid $white;
+        }
+
+        .containerIcon{
+            display: none;
+            border-left: none;
+        }
+
+        .desktopMenu {
+            width: 170px;
+            display: grid;
+            grid-template-rows: 1.5fr 1fr 1fr 5fr;
+            text-align: center;
+            border-left: 2px solid $white;
+            background-color: rgba(1, 1, 1, 0.400);
+      
+            a {
+                color: white;
+                font-size: $p-size;
+                font-family: $text-font;
+                font-weight: 600;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &.active {
+                    color: $coral;
+                }
+            }
+    
+            &_link1, &_link2 {
+                &:hover {
+                    color:  $coral;
+                }
+            }
+
+            
+
+            .contactBtn {
+                grid-row: 1/2;
+            }
+        }
+    }
+}
